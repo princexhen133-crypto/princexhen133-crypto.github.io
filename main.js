@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const energyCore = document.querySelector(".energy-core");
 
     /* =====================================================
-       ENERGY CORE — MOUSE / POINTER RESPONSE
+       ENERGY CORE — POINTER RESPONSE
        ===================================================== */
 
     if (coreSystem && energyCore) {
@@ -49,8 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
             currentX += (targetX - currentX) * 0.08;
             currentY += (targetY - currentY) * 0.08;
 
+            const scale =
+                1 +
+                Math.min(
+                    Math.abs(currentX) +
+                    Math.abs(currentY),
+                    1
+                ) * 0.035;
+
             energyCore.style.transform =
-                `translate(${currentX * 10}px, ${currentY * 10}px) scale(${1 + Math.abs(currentX + currentY) * 0.025})`;
+                `translate(${currentX * 10}px, ${currentY * 10}px) scale(${scale})`;
 
             coreSystem.style.setProperty(
                 "--core-x",
@@ -68,26 +76,38 @@ document.addEventListener("DOMContentLoaded", () => {
         animateCore();
     }
 
+
     /* =====================================================
        CAPABILITY CARD INTERACTION
        ===================================================== */
 
-    const cards = document.querySelectorAll(".capability-card");
+    const cards =
+        document.querySelectorAll(".capability-card");
 
     cards.forEach((card) => {
 
         card.addEventListener("pointermove", (event) => {
 
-            const rect = card.getBoundingClientRect();
+            const rect =
+                card.getBoundingClientRect();
 
             const x =
-                ((event.clientX - rect.left) / rect.width) * 100;
+                ((event.clientX - rect.left) /
+                    rect.width) * 100;
 
             const y =
-                ((event.clientY - rect.top) / rect.height) * 100;
+                ((event.clientY - rect.top) /
+                    rect.height) * 100;
 
-            card.style.setProperty("--mx", `${x}%`);
-            card.style.setProperty("--my", `${y}%`);
+            card.style.setProperty(
+                "--mx",
+                `${x}%`
+            );
+
+            card.style.setProperty(
+                "--my",
+                `${y}%`
+            );
         });
 
         card.addEventListener("pointerenter", () => {
@@ -99,15 +119,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
     /* =====================================================
        SIGNAL SYSTEM
        ===================================================== */
 
-    const signals = document.querySelectorAll(".signal-item");
+    const signals =
+        document.querySelectorAll(".signal-item");
 
     signals.forEach((signal, index) => {
 
-        const base = 55 + Math.random() * 35;
+        const base =
+            55 + Math.random() * 35;
 
         signal.style.setProperty(
             "--signal",
@@ -118,13 +141,19 @@ document.addEventListener("DOMContentLoaded", () => {
             `${index * 120}ms`;
     });
 
+
     /* =====================================================
        SCROLL REVEAL SYSTEM
        ===================================================== */
 
     const revealElements =
         document.querySelectorAll(
-            ".capability-card, .architecture-node, .roadmap-item, .creator-profile, .cognitive-step"
+            ".capability-card, " +
+            ".architecture-node, " +
+            ".roadmap-item, " +
+            ".creator-profile, " +
+            ".cognitive-step, " +
+            ".intelligence-console"
         );
 
     const revealObserver =
@@ -137,10 +166,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         return;
                     }
 
-                    const element = entry.target;
+                    const element =
+                        entry.target;
 
                     element.classList.add("reveal");
-                    element.classList.add("visible");
+
+                    requestAnimationFrame(() => {
+                        element.classList.add("visible");
+                    });
 
                     observer.unobserve(element);
                 });
@@ -159,15 +192,20 @@ document.addEventListener("DOMContentLoaded", () => {
         revealObserver.observe(element);
     });
 
+
     /* =====================================================
        ACTIVE NAVIGATION
        ===================================================== */
 
     const sections =
-        document.querySelectorAll("section[id]");
+        document.querySelectorAll(
+            "section[id]"
+        );
 
     const navLinks =
-        document.querySelectorAll("nav a[href^='#']");
+        document.querySelectorAll(
+            "nav a[href^='#']"
+        );
 
     const navObserver =
         new IntersectionObserver(
@@ -179,21 +217,24 @@ document.addEventListener("DOMContentLoaded", () => {
                         return;
                     }
 
-                    const id = entry.target.id;
+                    const id =
+                        entry.target.id;
 
                     navLinks.forEach((link) => {
 
                         link.classList.toggle(
                             "active",
-                            link.getAttribute("href") === `#${id}`
+                            link.getAttribute("href") ===
+                            `#${id}`
                         );
-
                     });
                 });
 
             },
             {
-                rootMargin: "-35% 0px -55% 0px",
+                rootMargin:
+                    "-35% 0px -55% 0px",
+
                 threshold: 0
             }
         );
@@ -201,6 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section) => {
         navObserver.observe(section);
     });
+
 
     /* =====================================================
        SMOOTH ANCHOR NAVIGATION
@@ -229,22 +271,30 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
     /* =====================================================
-       CORE ACTIVITY
+       ENERGY CORE AUTONOMOUS ACTIVITY
        ===================================================== */
 
     if (coreSystem) {
 
         setInterval(() => {
 
-            coreSystem.classList.add("core-active");
+            coreSystem.classList.add(
+                "core-active"
+            );
 
             setTimeout(() => {
-                coreSystem.classList.remove("core-active");
+
+                coreSystem.classList.remove(
+                    "core-active"
+                );
+
             }, 900);
 
         }, 4200);
     }
+
 
     /* =====================================================
        SIGNAL ACTIVITY
@@ -257,7 +307,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const signal =
                 signals[
                     Math.floor(
-                        Math.random() * signals.length
+                        Math.random() *
+                        signals.length
                     )
                 ];
 
@@ -272,12 +323,321 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 900);
     }
 
+
     /* =====================================================
-       SYSTEM READY
+       JAVAS LIVE INTELLIGENCE CONSOLE
        ===================================================== */
 
-    document.documentElement.classList.add(
-        "javas-ready"
+    const intelligenceConsole =
+        document.querySelector(
+            ".intelligence-console"
+        );
+
+    const pipelineNodes =
+        document.querySelectorAll(
+            ".pipeline-node"
+        );
+
+    const activityStream =
+        document.querySelector(
+            "#javas-activity"
+        );
+
+
+    /* =====================================================
+       COGNITIVE PIPELINE
+       ===================================================== */
+
+    if (
+        intelligenceConsole &&
+        pipelineNodes.length
+    ) {
+
+        let pipelineIndex = 0;
+
+        const pipelineStages = [
+            "OBSERVE",
+            "UNDERSTAND",
+            "REASON",
+            "DECIDE",
+            "PLAN",
+            "ACT"
+        ];
+
+        function activatePipeline() {
+
+            pipelineNodes.forEach(
+                (node, index) => {
+
+                    node.classList.toggle(
+                        "active",
+                        index === pipelineIndex
+                    );
+                }
+            );
+
+            intelligenceConsole.classList.add(
+                "console-active"
+            );
+
+            if (coreSystem) {
+
+                coreSystem.classList.add(
+                    "core-active"
+                );
+
+                setTimeout(() => {
+
+                    coreSystem.classList.remove(
+                        "core-active"
+                    );
+
+                }, 550);
+            }
+
+            setTimeout(() => {
+
+                intelligenceConsole.classList.remove(
+                    "console-active"
+                );
+
+            }, 650);
+
+            pipelineIndex =
+                (pipelineIndex + 1) %
+                pipelineNodes.length;
+        }
+
+        activatePipeline();
+
+        setInterval(
+            activatePipeline,
+            1500
+        );
+
+
+        /* =================================================
+           LIVE ACTIVITY STREAM
+           ================================================= */
+
+        if (activityStream) {
+
+            const activityMessages = [
+
+                [
+                    "CORE",
+                    "JAVAS cognitive engine monitoring active"
+                ],
+
+                [
+                    "PERCEPTION",
+                    "Environment perception cycle running"
+                ],
+
+                [
+                    "REASONING",
+                    "Reasoning engine evaluating context"
+                ],
+
+                [
+                    "DECISION",
+                    "Decision engine evaluating next action"
+                ],
+
+                [
+                    "PLANNER",
+                    "Planner constructing execution sequence"
+                ],
+
+                [
+                    "MEMORY",
+                    "Memory subsystem maintaining context"
+                ],
+
+                [
+                    "RESEARCH",
+                    "Research subsystem standing by"
+                ],
+
+                [
+                    "ACTION",
+                    "Action router awaiting instruction"
+                ],
+
+                [
+                    "SYSTEM",
+                    "JAVAS autonomous pipeline synchronized"
+                ],
+
+                [
+                    "COMMUNICATION",
+                    "Communication subsystem ready"
+                ],
+
+                [
+                    "VISION",
+                    "Visual perception subsystem ready"
+                ]
+            ];
+
+
+            function getTime() {
+
+                const now =
+                    new Date();
+
+                return now.toLocaleTimeString(
+                    [],
+                    {
+                        hour12: false
+                    }
+                );
+            }
+
+
+            function addActivity() {
+
+                const item =
+                    activityMessages[
+                        Math.floor(
+                            Math.random() *
+                            activityMessages.length
+                        )
+                    ];
+
+                const line =
+                    document.createElement(
+                        "div"
+                    );
+
+                line.className =
+                    "activity-line";
+
+                line.innerHTML = `
+                    <span class="activity-time">
+                        ${getTime()}
+                    </span>
+
+                    <span class="activity-type">
+                        ${item[0]}
+                    </span>
+
+                    <span>
+                        ${item[1]}
+                    </span>
+                `;
+
+                activityStream.prepend(line);
+
+                while (
+                    activityStream.children.length >
+                    6
+                ) {
+                    activityStream.lastElementChild.remove();
+                }
+            }
+
+
+            setInterval(
+                addActivity,
+                2600
+            );
+        }
+    }
+
+
+    /* =====================================================
+       CORE → CONSOLE SYNCHRONIZATION
+       ===================================================== */
+
+    if (
+        coreSystem &&
+        intelligenceConsole
+    ) {
+
+        setInterval(() => {
+
+            intelligenceConsole.classList.add(
+                "console-active"
+            );
+
+            coreSystem.classList.add(
+                "core-active"
+            );
+
+            setTimeout(() => {
+
+                intelligenceConsole.classList.remove(
+                    "console-active"
+                );
+
+                coreSystem.classList.remove(
+                    "core-active"
+                );
+
+            }, 700);
+
+        }, 7200);
+    }
+
+
+    /* =====================================================
+       COGNITIVE STEP INTERACTION
+       ===================================================== */
+
+    const cognitiveSteps =
+        document.querySelectorAll(
+            ".cognitive-step"
+        );
+
+    cognitiveSteps.forEach((step) => {
+
+        step.addEventListener(
+            "pointerenter",
+            () => {
+
+                step.classList.add(
+                    "cognitive-active"
+                );
+            }
+        );
+
+        step.addEventListener(
+            "pointerleave",
+            () => {
+
+                step.classList.remove(
+                    "cognitive-active"
+                );
+            }
+        );
+    });
+
+
+    /* =====================================================
+       PAGE LOAD STATE
+       ===================================================== */
+
+    requestAnimationFrame(() => {
+
+        document.documentElement.classList.add(
+            "javas-ready"
+        );
+    });
+
+
+    /* =====================================================
+       JAVAS INITIALIZATION SIGNAL
+       ===================================================== */
+
+    console.log(
+        "%cJAVAS — Personal Autonomous Artificial Intelligence",
+        "color:#00eaff;font-weight:bold;font-size:14px;"
+    );
+
+    console.log(
+        "%cCognitive interface initialized.",
+        "color:#67f7ff;"
     );
 
 });
