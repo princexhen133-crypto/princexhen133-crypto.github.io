@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://javas.ai/</loc>
+        <loc>https://princexhen133-crypto.github.io/</loc>
     </url>
 
     <url>
-        <loc>https://javas.ai/intelligence.html</loc>
+        <loc>https://princexhen133-crypto.github.io/intelligence.html</loc>
     </url>
 
     <url>
-        <loc>https://javas.ai/capabilities.html</loc>
+        <loc>https://princexhen133-crypto.github.io/capabilities.html</loc>
     </url>
 
     <url>
-        <loc>https://javas.ai/architecture.html</loc>
+        <loc>https://princexhen133-crypto.github.io/architecture.html</loc>
     </url>
 
     <url>
-        <loc>https://javas.ai/roadmap.html</loc>
+        <loc>https://princexhen133-crypto.github.io/roadmap.html</loc>
     </url>
 
     <url>
-        <loc>https://javas.ai/contact.html</loc>
+        <loc>https://princexhen133-crypto.github.io/contact.html</loc>
     </url>
 
 </urlset>
