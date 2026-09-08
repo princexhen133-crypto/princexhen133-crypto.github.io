@@ -6,7 +6,666 @@
 <meta name="description" content="Contact JAVAS — Personal Autonomous Artificial Intelligence Platform created by Buyi Julius Xhen.">
 <meta name="theme-color" content="#020711">
 <title>JAVAS — Contact</title>
+
 <link rel="stylesheet" href="main.css">
+
+<style>
+
+/* =========================================================
+   JAVAS CONTACT PAGE — FUTURISTIC TEXT SYSTEM
+========================================================= */
+
+:root {
+    --contact-cyan: #00eaff;
+    --contact-cyan-soft: rgba(0, 234, 255, 0.65);
+    --contact-cyan-faint: rgba(0, 234, 255, 0.16);
+    --contact-white: #e9fcff;
+    --contact-text: rgba(215, 241, 247, 0.72);
+    --contact-muted: rgba(174, 215, 225, 0.48);
+}
+
+
+/* =========================================================
+   GLOBAL CONTACT TYPOGRAPHY
+========================================================= */
+
+body {
+    --contact-font-display: "Arial Narrow", "Segoe UI", Arial, sans-serif;
+    --contact-font-hud: "Consolas", "Courier New", monospace;
+}
+
+.contact-page-text {
+    position: relative;
+}
+
+
+/* =========================================================
+   HERO TYPOGRAPHY
+========================================================= */
+
+.hero-kicker {
+    font-family: var(--contact-font-hud);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--contact-cyan);
+    text-shadow:
+        0 0 8px rgba(0, 234, 255, 0.7),
+        0 0 22px rgba(0, 234, 255, 0.2);
+}
+
+.hero-logo {
+    font-family: var(--contact-font-display);
+    font-weight: 900;
+    letter-spacing: 9px;
+    text-shadow:
+        0 0 10px rgba(0, 234, 255, 0.75),
+        0 0 30px rgba(0, 234, 255, 0.38),
+        0 0 70px rgba(0, 180, 255, 0.16);
+}
+
+.hero-subtitle {
+    font-family: var(--contact-font-hud);
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: rgba(218, 248, 253, 0.68);
+    text-shadow: 0 0 15px rgba(0, 234, 255, 0.12);
+}
+
+.hero-process {
+    font-family: var(--contact-font-hud);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-process span {
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+.hero-process span:hover {
+    color: var(--contact-cyan);
+    text-shadow: 0 0 12px rgba(0, 234, 255, 0.8);
+}
+
+.hero-process i {
+    color: var(--contact-cyan);
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.8);
+}
+
+
+/* =========================================================
+   HERO PANELS — TEXT
+========================================================= */
+
+.hero-panel strong {
+    font-family: var(--contact-font-display);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--contact-white);
+    text-shadow: 0 0 12px rgba(0, 234, 255, 0.16);
+}
+
+.hero-panel .panel-header span {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--contact-font-hud);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--contact-cyan-soft);
+}
+
+.panel-status > span:not(.panel-status-indicator) {
+    font-family: var(--contact-font-hud);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgba(208, 239, 246, 0.58);
+}
+
+.panel-status strong {
+    font-family: var(--contact-font-hud);
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: var(--contact-cyan);
+}
+
+.hero-activity-line > span:last-child {
+    font-family: var(--contact-font-display);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: rgba(218, 243, 248, 0.66);
+}
+
+.activity-time,
+.activity-type {
+    font-family: var(--contact-font-hud) !important;
+}
+
+.activity-time {
+    color: rgba(0, 234, 255, 0.42) !important;
+    letter-spacing: 1px !important;
+}
+
+.activity-type {
+    color: var(--contact-cyan) !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+}
+
+
+/* =========================================================
+   CORE CAPTION
+========================================================= */
+
+.core-caption-label {
+    font-family: var(--contact-font-hud) !important;
+    font-weight: 800 !important;
+    letter-spacing: 3px !important;
+    color: var(--contact-cyan) !important;
+    text-shadow: 0 0 12px rgba(0, 234, 255, 0.55);
+}
+
+.core-caption-status {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 8px !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    color: rgba(210, 241, 247, 0.5) !important;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+    position: relative;
+}
+
+.section-eyebrow {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 4px !important;
+    color: var(--contact-cyan) !important;
+    text-shadow:
+        0 0 8px rgba(0, 234, 255, 0.55),
+        0 0 20px rgba(0, 234, 255, 0.12);
+}
+
+.section-heading h2 {
+    font-family: var(--contact-font-display);
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--contact-white);
+    text-shadow:
+        0 0 12px rgba(0, 234, 255, 0.16),
+        0 0 35px rgba(0, 180, 255, 0.08);
+}
+
+.section-heading h2 span {
+    color: var(--contact-cyan);
+    text-shadow:
+        0 0 10px rgba(0, 234, 255, 0.6),
+        0 0 28px rgba(0, 234, 255, 0.18);
+}
+
+.section-heading p {
+    max-width: 780px;
+    font-family: var(--contact-font-display);
+    font-size: 14px;
+    line-height: 1.9;
+    letter-spacing: 0.4px;
+    color: var(--contact-text);
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+========================================================= */
+
+.contact-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 234, 255, 0.55),
+        transparent
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.contact-card:hover::after {
+    opacity: 1;
+}
+
+.contact-card-index {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    color: rgba(0, 234, 255, 0.4) !important;
+}
+
+.contact-card-icon {
+    font-family: Arial, sans-serif;
+    color: var(--contact-cyan) !important;
+    text-shadow:
+        0 0 10px rgba(0, 234, 255, 0.7),
+        0 0 25px rgba(0, 234, 255, 0.2);
+}
+
+.contact-label {
+    display: block;
+    margin-bottom: 9px;
+    font-family: var(--contact-font-hud) !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    color: var(--contact-cyan) !important;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.35);
+}
+
+.contact-card-content h3 {
+    font-family: var(--contact-font-display) !important;
+    font-size: 19px !important;
+    font-weight: 900 !important;
+    letter-spacing: 3px !important;
+    color: var(--contact-white) !important;
+    text-shadow: 0 0 18px rgba(0, 234, 255, 0.12);
+}
+
+.contact-card-content p {
+    font-family: var(--contact-font-display) !important;
+    font-size: 12px !important;
+    line-height: 1.85 !important;
+    letter-spacing: 0.35px !important;
+    color: var(--contact-text) !important;
+}
+
+.contact-card-status {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 8px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    color: rgba(0, 234, 255, 0.58) !important;
+}
+
+.contact-card-status span {
+    box-shadow:
+        0 0 8px var(--contact-cyan),
+        0 0 18px rgba(0, 234, 255, 0.45);
+}
+
+
+/* =========================================================
+   SPLIT SECTION
+========================================================= */
+
+.split-content .section-eyebrow {
+    margin-bottom: 12px;
+}
+
+.split-content h2 {
+    font-family: var(--contact-font-display);
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--contact-white);
+    text-shadow: 0 0 20px rgba(0, 234, 255, 0.1);
+}
+
+.split-content h2 span {
+    color: var(--contact-cyan);
+    text-shadow:
+        0 0 10px rgba(0, 234, 255, 0.65),
+        0 0 30px rgba(0, 234, 255, 0.16);
+}
+
+.split-content > p {
+    font-family: var(--contact-font-display);
+    font-size: 13px;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+    color: var(--contact-text);
+}
+
+
+/* =========================================================
+   BULLET SYSTEM
+========================================================= */
+
+.bullet-item {
+    position: relative;
+}
+
+.bullet-item > span {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    color: var(--contact-cyan) !important;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.45);
+}
+
+.bullet-item strong {
+    font-family: var(--contact-font-display) !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
+    color: var(--contact-white) !important;
+}
+
+.bullet-item p {
+    font-family: var(--contact-font-display) !important;
+    font-size: 11px !important;
+    line-height: 1.7 !important;
+    letter-spacing: 0.25px !important;
+    color: var(--contact-muted) !important;
+}
+
+
+/* =========================================================
+   SYSTEM VISUAL
+========================================================= */
+
+.visual-node {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 8px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    color: var(--contact-cyan) !important;
+    text-shadow:
+        0 0 8px rgba(0, 234, 255, 0.65),
+        0 0 20px rgba(0, 234, 255, 0.2);
+}
+
+.visual-core span {
+    font-family: var(--contact-font-display) !important;
+    font-weight: 900 !important;
+    color: var(--contact-white) !important;
+    text-shadow:
+        0 0 12px rgba(0, 234, 255, 0.7),
+        0 0 35px rgba(0, 234, 255, 0.25);
+}
+
+.visual-core strong {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    color: var(--contact-cyan) !important;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.feature-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 1px;
+    background: var(--contact-cyan);
+    box-shadow: 0 0 12px var(--contact-cyan);
+}
+
+.feature-index {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    color: rgba(0, 234, 255, 0.45) !important;
+}
+
+.feature-card h3 {
+    font-family: var(--contact-font-display) !important;
+    font-size: 16px !important;
+    font-weight: 900 !important;
+    letter-spacing: 2.5px !important;
+    color: var(--contact-white) !important;
+    text-shadow: 0 0 16px rgba(0, 234, 255, 0.1);
+}
+
+.feature-card p {
+    font-family: var(--contact-font-display) !important;
+    font-size: 12px !important;
+    line-height: 1.85 !important;
+    letter-spacing: 0.35px !important;
+    color: var(--contact-text) !important;
+}
+
+.feature-tags span {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 8px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    color: rgba(0, 234, 255, 0.62) !important;
+}
+
+
+/* =========================================================
+   FINAL VISION PANEL
+========================================================= */
+
+.final-content .section-eyebrow {
+    font-family: var(--contact-font-hud);
+}
+
+.final-content h2 {
+    font-family: var(--contact-font-display);
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--contact-white);
+    text-shadow:
+        0 0 15px rgba(0, 234, 255, 0.15),
+        0 0 35px rgba(0, 180, 255, 0.08);
+}
+
+.final-content h2 span {
+    display: block;
+    color: var(--contact-cyan);
+    text-shadow:
+        0 0 10px rgba(0, 234, 255, 0.65),
+        0 0 30px rgba(0, 234, 255, 0.18);
+}
+
+.final-content > p {
+    font-family: var(--contact-font-display);
+    font-size: 14px;
+    line-height: 1.9;
+    letter-spacing: 0.4px;
+    color: var(--contact-text);
+}
+
+
+/* =========================================================
+   BUTTON TEXT
+========================================================= */
+
+.primary-button,
+.secondary-button {
+    font-family: var(--contact-font-hud) !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+}
+
+.primary-button span,
+.secondary-button span {
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-logo {
+    font-family: var(--contact-font-display) !important;
+    font-weight: 900 !important;
+    letter-spacing: 7px !important;
+    color: var(--contact-white) !important;
+    text-shadow:
+        0 0 10px rgba(0, 234, 255, 0.65),
+        0 0 30px rgba(0, 234, 255, 0.2);
+}
+
+.footer-brand p {
+    font-family: var(--contact-font-display) !important;
+    font-size: 11px !important;
+    line-height: 1.7 !important;
+    letter-spacing: 0.7px !important;
+    color: var(--contact-text) !important;
+}
+
+.footer-brand > span {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 8px !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    color: rgba(0, 234, 255, 0.48) !important;
+}
+
+.footer-links strong {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    color: var(--contact-cyan) !important;
+}
+
+.footer-links a {
+    font-family: var(--contact-font-display) !important;
+    font-size: 10px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.8px !important;
+    color: rgba(208, 237, 243, 0.55) !important;
+    transition:
+        color 0.25s ease,
+        text-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.footer-links a:hover {
+    color: var(--contact-white) !important;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.45);
+}
+
+.footer-bottom span {
+    font-family: var(--contact-font-hud) !important;
+    font-size: 8px !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    color: rgba(170, 213, 223, 0.4) !important;
+}
+
+.footer-bottom span:last-child {
+    color: rgba(0, 234, 255, 0.58) !important;
+    text-shadow: 0 0 8px rgba(0, 234, 255, 0.3);
+}
+
+
+/* =========================================================
+   SUBTLE TEXT SCAN EFFECT
+========================================================= */
+
+.contact-card h3,
+.feature-card h3,
+.split-content h2,
+.final-content h2 {
+    position: relative;
+}
+
+.contact-card h3::after,
+.feature-card h3::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 1px;
+    margin-top: 10px;
+    background: var(--contact-cyan);
+    box-shadow: 0 0 8px var(--contact-cyan);
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   RESPONSIVE TYPOGRAPHY
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .hero-kicker {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .hero-logo {
+        letter-spacing: 5px;
+    }
+
+    .hero-subtitle {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .hero-process {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .section-heading h2 {
+        letter-spacing: 2px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .contact-card-content h3 {
+        font-size: 16px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .feature-card h3 {
+        font-size: 14px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .final-content h2 {
+        letter-spacing: 2px;
+    }
+
+    .footer-bottom span {
+        letter-spacing: 1px !important;
+    }
+}
+
+</style>
 </head>
 
 <body id="top">
@@ -19,7 +678,13 @@
     <div class="background-noise"></div>
 </div>
 
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
 <header class="site-header">
+
     <div class="header-inner">
 
         <nav class="site-nav site-nav-left">
@@ -44,10 +709,12 @@
         </div>
 
     </div>
+
 </header>
 
 
-<main>
+<main class="contact-page-text">
+
 
 <!-- =========================================================
      CONTACT HERO
@@ -56,13 +723,16 @@
 <section class="hero" id="contact">
 
     <div class="hero-hud">
+
         <div class="hud-ring hud-ring-one"></div>
         <div class="hud-ring hud-ring-two"></div>
         <div class="hud-ring hud-ring-three"></div>
 
         <div class="hud-crosshair hud-crosshair-one"></div>
         <div class="hud-crosshair hud-crosshair-two"></div>
+
     </div>
+
 
     <div class="hero-content">
 
@@ -79,16 +749,23 @@
         </div>
 
         <div class="hero-process">
+
             <span>IDEA</span>
             <i>•</i>
+
             <span>ENGINEERING</span>
             <i>•</i>
+
             <span>INTELLIGENCE</span>
             <i>•</i>
+
             <span>COLLABORATION</span>
             <i>•</i>
+
             <span>EVOLUTION</span>
+
         </div>
+
 
         <div class="hero-actions">
 
@@ -107,7 +784,9 @@
     </div>
 
 
-    <!-- LEFT PANEL -->
+    <!-- =====================================================
+         LEFT PANEL
+    ===================================================== -->
 
     <aside class="hero-panel hero-panel-left">
 
@@ -118,8 +797,15 @@
             </div>
 
             <div>
-                <strong>JAVAS NETWORK</strong>
-                <span>PLATFORM CONNECTION</span>
+
+                <strong>
+                    JAVAS NETWORK
+                </strong>
+
+                <span>
+                    PLATFORM CONNECTION
+                </span>
+
             </div>
 
         </div>
@@ -128,27 +814,62 @@
         <div class="panel-status-list">
 
             <div class="panel-status">
+
                 <span class="panel-status-indicator"></span>
-                <span>PLATFORM</span>
-                <strong>ONLINE</strong>
+
+                <span>
+                    PLATFORM
+                </span>
+
+                <strong>
+                    ONLINE
+                </strong>
+
             </div>
 
-            <div class="panel-status">
-                <span class="panel-status-indicator"></span>
-                <span>CORE</span>
-                <strong>ACTIVE</strong>
-            </div>
 
             <div class="panel-status">
+
                 <span class="panel-status-indicator"></span>
-                <span>DEVELOPMENT</span>
-                <strong>ACTIVE</strong>
+
+                <span>
+                    CORE
+                </span>
+
+                <strong>
+                    ACTIVE
+                </strong>
+
             </div>
 
+
             <div class="panel-status">
+
                 <span class="panel-status-indicator"></span>
-                <span>COMMUNICATION</span>
-                <strong>READY</strong>
+
+                <span>
+                    DEVELOPMENT
+                </span>
+
+                <strong>
+                    ACTIVE
+                </strong>
+
+            </div>
+
+
+            <div class="panel-status">
+
+                <span class="panel-status-indicator"></span>
+
+                <span>
+                    COMMUNICATION
+                </span>
+
+                <strong>
+                    READY
+                </strong>
+
             </div>
 
         </div>
@@ -156,7 +877,9 @@
     </aside>
 
 
-    <!-- RIGHT PANEL -->
+    <!-- =====================================================
+         RIGHT PANEL
+    ===================================================== -->
 
     <aside class="hero-panel hero-panel-right">
 
@@ -167,8 +890,15 @@
             </div>
 
             <div>
-                <strong>CONTACT CHANNEL</strong>
-                <span>JAVAS INTERFACE</span>
+
+                <strong>
+                    CONTACT CHANNEL
+                </strong>
+
+                <span>
+                    JAVAS INTERFACE
+                </span>
+
             </div>
 
         </div>
@@ -177,33 +907,87 @@
         <div class="hero-activity">
 
             <div class="hero-activity-line">
-                <span class="activity-time">01</span>
-                <span class="activity-type">CORE</span>
-                <span>Connection initialized</span>
+
+                <span class="activity-time">
+                    01
+                </span>
+
+                <span class="activity-type">
+                    CORE
+                </span>
+
+                <span>
+                    Connection initialized
+                </span>
+
             </div>
 
-            <div class="hero-activity-line">
-                <span class="activity-time">02</span>
-                <span class="activity-type">LINK</span>
-                <span>Communication layer ready</span>
-            </div>
 
             <div class="hero-activity-line">
-                <span class="activity-time">03</span>
-                <span class="activity-type">JAVAS</span>
-                <span>Platform available</span>
+
+                <span class="activity-time">
+                    02
+                </span>
+
+                <span class="activity-type">
+                    LINK
+                </span>
+
+                <span>
+                    Communication layer ready
+                </span>
+
             </div>
 
-            <div class="hero-activity-line">
-                <span class="activity-time">04</span>
-                <span class="activity-type">DEV</span>
-                <span>Creator interface ready</span>
-            </div>
 
             <div class="hero-activity-line">
-                <span class="activity-time">05</span>
-                <span class="activity-type">READY</span>
-                <span>Awaiting communication</span>
+
+                <span class="activity-time">
+                    03
+                </span>
+
+                <span class="activity-type">
+                    JAVAS
+                </span>
+
+                <span>
+                    Platform available
+                </span>
+
+            </div>
+
+
+            <div class="hero-activity-line">
+
+                <span class="activity-time">
+                    04
+                </span>
+
+                <span class="activity-type">
+                    DEV
+                </span>
+
+                <span>
+                    Creator interface ready
+                </span>
+
+            </div>
+
+
+            <div class="hero-activity-line">
+
+                <span class="activity-time">
+                    05
+                </span>
+
+                <span class="activity-type">
+                    READY
+                </span>
+
+                <span>
+                    Awaiting communication
+                </span>
+
             </div>
 
         </div>
@@ -211,7 +995,9 @@
     </aside>
 
 
-    <!-- ENERGY CORE -->
+    <!-- =====================================================
+         ENERGY CORE
+    ===================================================== -->
 
     <div class="core-system">
 
@@ -221,6 +1007,7 @@
         <div class="core-hud-line core-hud-line-one"></div>
         <div class="core-hud-line core-hud-line-two"></div>
         <div class="core-hud-line core-hud-line-three"></div>
+
 
         <div class="orbit-ring orbit-ring-one">
             <span class="orbit-node orbit-node-one"></span>
@@ -265,6 +1052,7 @@
 
 
         <div class="core-caption">
+
             <span class="core-caption-label">
                 JAVAS CORE
             </span>
@@ -272,6 +1060,7 @@
             <span class="core-caption-status">
                 COMMUNICATION CHANNEL
             </span>
+
         </div>
 
     </div>
@@ -309,8 +1098,6 @@
     <div class="contact-grid">
 
 
-        <!-- CREATOR -->
-
         <article class="contact-card">
 
             <div class="contact-card-index">
@@ -345,8 +1132,6 @@
 
         </article>
 
-
-        <!-- PROJECT -->
 
         <article class="contact-card">
 
@@ -384,8 +1169,6 @@
         </article>
 
 
-        <!-- COLLABORATION -->
-
         <article class="contact-card">
 
             <div class="contact-card-index">
@@ -420,7 +1203,6 @@
             </div>
 
         </article>
-
 
     </div>
 
@@ -463,15 +1245,23 @@
 
             <div class="bullet-system">
 
+
                 <div class="bullet-item">
 
-                    <span>01</span>
+                    <span>
+                        01
+                    </span>
 
                     <div>
-                        <strong>INTELLIGENCE</strong>
+
+                        <strong>
+                            INTELLIGENCE
+                        </strong>
+
                         <p>
                             Understand, reason and synthesize information.
                         </p>
+
                     </div>
 
                 </div>
@@ -479,13 +1269,20 @@
 
                 <div class="bullet-item">
 
-                    <span>02</span>
+                    <span>
+                        02
+                    </span>
 
                     <div>
-                        <strong>PERCEPTION</strong>
+
+                        <strong>
+                            PERCEPTION
+                        </strong>
+
                         <p>
                             Understand information from multiple modalities.
                         </p>
+
                     </div>
 
                 </div>
@@ -493,13 +1290,20 @@
 
                 <div class="bullet-item">
 
-                    <span>03</span>
+                    <span>
+                        03
+                    </span>
 
                     <div>
-                        <strong>AUTONOMY</strong>
+
+                        <strong>
+                            AUTONOMY
+                        </strong>
+
                         <p>
                             Plan and execute controlled tasks.
                         </p>
+
                     </div>
 
                 </div>
@@ -507,13 +1311,20 @@
 
                 <div class="bullet-item">
 
-                    <span>04</span>
+                    <span>
+                        04
+                    </span>
 
                     <div>
-                        <strong>ADAPTATION</strong>
+
+                        <strong>
+                            ADAPTATION
+                        </strong>
+
                         <p>
                             Improve through controlled development cycles.
                         </p>
+
                     </div>
 
                 </div>
@@ -528,6 +1339,7 @@
             <div class="visual-frame">
 
                 <div class="visual-grid"></div>
+
 
                 <div class="visual-core">
 
@@ -616,9 +1428,11 @@
             </p>
 
             <div class="feature-tags">
+
                 <span>TEXT</span>
                 <span>VOICE</span>
                 <span>CONTEXT</span>
+
             </div>
 
         </article>
@@ -640,9 +1454,11 @@
             </p>
 
             <div class="feature-tags">
+
                 <span>FILES</span>
                 <span>APPS</span>
                 <span>TOOLS</span>
+
             </div>
 
         </article>
@@ -664,13 +1480,14 @@
             </p>
 
             <div class="feature-tags">
+
                 <span>MODELS</span>
                 <span>SEARCH</span>
                 <span>AGENTS</span>
+
             </div>
 
         </article>
-
 
     </div>
 
@@ -755,35 +1572,66 @@
 
         <div class="footer-links">
 
+
             <div>
 
-                <strong>PLATFORM</strong>
+                <strong>
+                    PLATFORM
+                </strong>
 
-                <a href="index.html">Home</a>
-                <a href="intelligence.html">Intelligence</a>
-                <a href="capabilities.html">Capabilities</a>
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="intelligence.html">
+                    Intelligence
+                </a>
+
+                <a href="capabilities.html">
+                    Capabilities
+                </a>
 
             </div>
 
 
             <div>
 
-                <strong>SYSTEM</strong>
+                <strong>
+                    SYSTEM
+                </strong>
 
-                <a href="architecture.html">Architecture</a>
-                <a href="roadmap.html">Roadmap</a>
-                <a href="contact.html">Contact</a>
+                <a href="architecture.html">
+                    Architecture
+                </a>
+
+                <a href="roadmap.html">
+                    Roadmap
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
 
             </div>
 
 
             <div>
 
-                <strong>CORE</strong>
+                <strong>
+                    CORE
+                </strong>
 
-                <a href="#top">Back to top</a>
-                <a href="index.html#platform">JAVAS Core</a>
-                <a href="architecture.html">System Design</a>
+                <a href="#top">
+                    Back to top
+                </a>
+
+                <a href="index.html#platform">
+                    JAVAS Core
+                </a>
+
+                <a href="architecture.html">
+                    System Design
+                </a>
 
             </div>
 
