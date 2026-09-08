@@ -1,4 +1,28 @@
-User-agent: *
-Allow: /
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-Sitemap: https://javas.ai/sitemap.xml
+    <url>
+        <loc>https://javas.ai/</loc>
+    </url>
+
+    <url>
+        <loc>https://javas.ai/intelligence.html</loc>
+    </url>
+
+    <url>
+        <loc>https://javas.ai/capabilities.html</loc>
+    </url>
+
+    <url>
+        <loc>https://javas.ai/architecture.html</loc>
+    </url>
+
+    <url>
+        <loc>https://javas.ai/roadmap.html</loc>
+    </url>
+
+    <url>
+        <loc>https://javas.ai/contact.html</loc>
+    </url>
+
+</urlset>
