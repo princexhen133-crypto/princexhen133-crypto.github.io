@@ -1,28 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+User-agent: *
+Allow: /
 
-    <url>
-        <loc>https://princexhen133-crypto.github.io/</loc>
-    </url>
-
-    <url>
-        <loc>https://princexhen133-crypto.github.io/intelligence.html</loc>
-    </url>
-
-    <url>
-        <loc>https://princexhen133-crypto.github.io/capabilities.html</loc>
-    </url>
-
-    <url>
-        <loc>https://princexhen133-crypto.github.io/architecture.html</loc>
-    </url>
-
-    <url>
-        <loc>https://princexhen133-crypto.github.io/roadmap.html</loc>
-    </url>
-
-    <url>
-        <loc>https://princexhen133-crypto.github.io/contact.html</loc>
-    </url>
-
-</urlset>
+Sitemap: https://princexhen133-crypto.github.io/sitemap.xml
