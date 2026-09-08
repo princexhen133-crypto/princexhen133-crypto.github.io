@@ -3,10 +3,688 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="JAVAS Roadmap — The evolution of the Personal Autonomous Artificial Intelligence Platform created by Buyi Julius Xhen.">
+
+<meta name="description"
+      content="JAVAS Roadmap — The evolution of a personal autonomous artificial intelligence platform created by Buyi Julius Xhen.">
+
 <meta name="theme-color" content="#020711">
+
 <title>JAVAS — Roadmap</title>
+
 <link rel="stylesheet" href="main.css">
+
+<style>
+/* =========================================================
+   JAVAS ROADMAP — FUTURISTIC TYPOGRAPHY SYSTEM
+   ========================================================= */
+
+:root {
+    --roadmap-cyan: #00eaff;
+    --roadmap-cyan-soft: rgba(0, 234, 255, 0.68);
+    --roadmap-cyan-faint: rgba(0, 234, 255, 0.15);
+    --roadmap-white: #e9fcff;
+    --roadmap-text: rgba(215, 241, 247, 0.74);
+    --roadmap-muted: rgba(174, 215, 225, 0.48);
+    --roadmap-line: rgba(0, 234, 255, 0.22);
+}
+
+body {
+    --roadmap-display:
+        "Arial Narrow",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    --roadmap-hud:
+        "Consolas",
+        "Courier New",
+        monospace;
+}
+
+/* =========================================================
+   GLOBAL TEXT
+   ========================================================= */
+
+.hero-kicker,
+.section-eyebrow,
+.panel-header span,
+.activity-type,
+.activity-time,
+.panel-status,
+.core-caption-status,
+.signal-label,
+.roadmap-card-index,
+.roadmap-card-state,
+.progress-label,
+.feature-index,
+.feature-tags span,
+.visual-node,
+.architecture-node-label,
+.footer-bottom span:last-child {
+    font-family: var(--roadmap-hud);
+    letter-spacing: 0.18em;
+}
+
+.hero-logo,
+.section-heading h2,
+.split-content h2,
+.final-content h2 {
+    font-family: var(--roadmap-display);
+    font-weight: 800;
+    letter-spacing: 0.055em;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-kicker {
+    color: var(--roadmap-cyan);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.34em;
+    text-shadow:
+        0 0 8px rgba(0, 234, 255, 0.5),
+        0 0 24px rgba(0, 234, 255, 0.16);
+}
+
+.hero-logo {
+    color: var(--roadmap-white);
+    text-shadow:
+        0 0 12px rgba(0, 234, 255, 0.35),
+        0 0 42px rgba(0, 234, 255, 0.14);
+}
+
+.hero-subtitle {
+    color: var(--roadmap-cyan-soft);
+    font-family: var(--roadmap-hud);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-shadow: 0 0 12px rgba(0, 234, 255, 0.24);
+}
+
+.hero-process {
+    font-family: var(--roadmap-hud);
+    font-size: 0.63rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.hero-process span {
+    color: rgba(221, 249, 255, 0.76);
+    text-shadow: 0 0 9px rgba(0, 234, 255, 0.08);
+}
+
+.hero-process span:first-child,
+.hero-process span:last-child {
+    color: var(--roadmap-cyan);
+}
+
+.hero-process i {
+    color: rgba(0, 234, 255, 0.5);
+    font-style: normal;
+}
+
+/* =========================================================
+   HERO PANELS
+   ========================================================= */
+
+.hero-panel strong {
+    color: var(--roadmap-white);
+    font-family: var(--roadmap-hud);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.hero-panel .panel-header span {
+    display: block;
+    margin-top: 4px;
+    color: var(--roadmap-muted);
+    font-size: 0.52rem;
+    font-weight: 600;
+    letter-spacing: 0.19em;
+}
+
+.panel-status > span:not(.panel-status-indicator) {
+    color: rgba(207, 239, 246, 0.58);
+    font-family: var(--roadmap-hud);
+    font-size: 0.53rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+}
+
+.panel-status strong {
+    color: var(--roadmap-cyan);
+    font-family: var(--roadmap-hud);
+    font-size: 0.51rem;
+    letter-spacing: 0.13em;
+    text-shadow: 0 0 9px rgba(0, 234, 255, 0.24);
+}
+
+.hero-activity-line > span:last-child {
+    color: rgba(211, 241, 247, 0.66);
+    font-family: var(--roadmap-hud);
+    font-size: 0.51rem;
+    letter-spacing: 0.07em;
+}
+
+.activity-time {
+    color: rgba(174, 215, 225, 0.38);
+    font-size: 0.47rem;
+}
+
+.activity-type {
+    color: var(--roadmap-cyan-soft);
+    font-size: 0.46rem;
+    font-weight: 700;
+}
+
+/* =========================================================
+   CORE CAPTION
+   ========================================================= */
+
+.core-caption-label {
+    color: var(--roadmap-cyan);
+    font-family: var(--roadmap-hud);
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 0.25em;
+    text-shadow:
+        0 0 10px rgba(0, 234, 255, 0.48);
+}
+
+.core-caption-status {
+    color: rgba(190, 231, 239, 0.48);
+    font-size: 0.44rem;
+    letter-spacing: 0.2em;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.section-eyebrow {
+    color: var(--roadmap-cyan);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-shadow: 0 0 12px rgba(0, 234, 255, 0.25);
+}
+
+.section-heading h2 {
+    color: var(--roadmap-white);
+    font-size: clamp(2rem, 4vw, 3.7rem);
+    line-height: 0.98;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 16px rgba(0, 234, 255, 0.12);
+}
+
+.section-heading h2 span,
+.split-content h2 span,
+.final-content h2 span {
+    color: var(--roadmap-cyan);
+    text-shadow:
+        0 0 14px rgba(0, 234, 255, 0.28);
+}
+
+.section-heading p,
+.split-content > p,
+.final-content > p {
+    color: var(--roadmap-text);
+    font-family: var(--roadmap-display);
+    font-size: 0.91rem;
+    line-height: 1.85;
+    letter-spacing: 0.025em;
+}
+
+/* =========================================================
+   SIGNAL SYSTEM
+   ========================================================= */
+
+.signal-label {
+    color: rgba(220, 247, 252, 0.74);
+    font-size: 0.51rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.signal-value {
+    color: var(--roadmap-cyan);
+    font-family: var(--roadmap-hud);
+    font-size: 0.45rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+/* =========================================================
+   ROADMAP CARDS
+   ========================================================= */
+
+.roadmap-card {
+    position: relative;
+}
+
+.roadmap-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 234, 255, 0.6),
+        transparent
+    );
+    opacity: 0.7;
+}
+
+.roadmap-card-index {
+    color: rgba(0, 234, 255, 0.44);
+    font-size: 0.56rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+}
+
+.roadmap-card-state {
+    color: var(--roadmap-cyan);
+    font-size: 0.48rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.2);
+}
+
+.roadmap-card h3 {
+    color: var(--roadmap-white);
+    font-family: var(--roadmap-display);
+    font-size: clamp(1.05rem, 2vw, 1.45rem);
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 12px rgba(0, 234, 255, 0.1);
+}
+
+.roadmap-card > p {
+    color: rgba(204, 235, 242, 0.62);
+    font-family: var(--roadmap-display);
+    font-size: 0.78rem;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
+}
+
+.roadmap-list li {
+    color: rgba(207, 238, 244, 0.58);
+    font-family: var(--roadmap-hud);
+    font-size: 0.49rem;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+}
+
+.roadmap-list li::before {
+    color: var(--roadmap-cyan);
+    text-shadow: 0 0 8px rgba(0, 234, 255, 0.45);
+}
+
+.progress-label {
+    color: rgba(188, 226, 234, 0.52);
+    font-size: 0.47rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.progress-label strong {
+    color: var(--roadmap-cyan);
+    font-weight: 700;
+}
+
+/* =========================================================
+   DATA SCIENCE / MACHINE LEARNING FEATURE CARDS
+   ========================================================= */
+
+.feature-card {
+    position: relative;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 234, 255, 0.5),
+        transparent
+    );
+}
+
+.feature-index {
+    color: rgba(0, 234, 255, 0.44);
+    font-size: 0.52rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.feature-card h3 {
+    color: var(--roadmap-white);
+    font-family: var(--roadmap-display);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.feature-card p {
+    color: rgba(203, 234, 241, 0.6);
+    font-family: var(--roadmap-display);
+    font-size: 0.75rem;
+    line-height: 1.75;
+    letter-spacing: 0.025em;
+}
+
+.feature-tags span {
+    color: rgba(0, 234, 255, 0.65);
+    font-size: 0.44rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+/* =========================================================
+   SELF-IMPROVEMENT BULLETS
+   ========================================================= */
+
+.bullet-item > span {
+    color: var(--roadmap-cyan);
+    font-family: var(--roadmap-hud);
+    font-size: 0.49rem;
+    font-weight: 800;
+    letter-spacing: 0.17em;
+}
+
+.bullet-item strong {
+    color: var(--roadmap-white);
+    font-family: var(--roadmap-display);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+}
+
+.bullet-item p {
+    color: rgba(200, 232, 239, 0.57);
+    font-family: var(--roadmap-display);
+    font-size: 0.71rem;
+    line-height: 1.65;
+}
+
+/* =========================================================
+   SELF-IMPROVEMENT VISUAL
+   ========================================================= */
+
+.visual-node {
+    color: rgba(209, 241, 247, 0.62);
+    font-size: 0.43rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.visual-core span {
+    color: rgba(0, 234, 255, 0.52);
+    font-family: var(--roadmap-hud);
+    font-size: 0.43rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.visual-core strong {
+    color: var(--roadmap-white);
+    font-family: var(--roadmap-display);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   HYBRID ARCHITECTURE FLOW
+   ========================================================= */
+
+.architecture-node-label {
+    color: rgba(214, 244, 249, 0.72);
+    font-family: var(--roadmap-hud);
+    font-size: 0.47rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.architecture-node small {
+    color: rgba(171, 214, 224, 0.43);
+    font-family: var(--roadmap-hud);
+    font-size: 0.39rem;
+    letter-spacing: 0.1em;
+}
+
+/* =========================================================
+   PRINCIPLE CARDS
+   ========================================================= */
+
+.principle-card {
+    position: relative;
+}
+
+.principle-card h3 {
+    color: var(--roadmap-white);
+    font-family: var(--roadmap-display);
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.principle-card p {
+    color: rgba(201, 232, 239, 0.57);
+    font-family: var(--roadmap-display);
+    font-size: 0.7rem;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.final-content .section-eyebrow {
+    letter-spacing: 0.32em;
+}
+
+.final-content h2 {
+    color: var(--roadmap-white);
+    font-size: clamp(2rem, 4.5vw, 4rem);
+    line-height: 0.98;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 18px rgba(0, 234, 255, 0.12);
+}
+
+.primary-button,
+.secondary-button {
+    font-family: var(--roadmap-hud);
+    font-size: 0.56rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer-logo {
+    color: var(--roadmap-white);
+    font-family: var(--roadmap-display);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-shadow:
+        0 0 13px rgba(0, 234, 255, 0.25);
+}
+
+.footer-brand p {
+    color: rgba(196, 229, 237, 0.5);
+    font-family: var(--roadmap-display);
+    font-size: 0.68rem;
+    line-height: 1.7;
+}
+
+.footer-brand > span {
+    color: rgba(0, 234, 255, 0.56);
+    font-family: var(--roadmap-hud);
+    font-size: 0.43rem;
+    letter-spacing: 0.16em;
+}
+
+.footer-links strong {
+    color: rgba(0, 234, 255, 0.68);
+    font-family: var(--roadmap-hud);
+    font-size: 0.47rem;
+    letter-spacing: 0.18em;
+}
+
+.footer-links a {
+    color: rgba(202, 235, 242, 0.52);
+    font-family: var(--roadmap-hud);
+    font-size: 0.47rem;
+    letter-spacing: 0.09em;
+    transition:
+        color 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+.footer-links a:hover {
+    color: var(--roadmap-cyan);
+    text-shadow:
+        0 0 10px rgba(0, 234, 255, 0.4);
+}
+
+.footer-bottom span {
+    color: rgba(167, 207, 217, 0.38);
+    font-family: var(--roadmap-hud);
+    font-size: 0.43rem;
+    letter-spacing: 0.09em;
+}
+
+.footer-bottom span:last-child {
+    color: rgba(0, 234, 255, 0.42);
+    font-size: 0.41rem;
+}
+
+/* =========================================================
+   SUBTLE FUTURISTIC SCAN EFFECT
+   ========================================================= */
+
+.roadmap-card h3,
+.feature-card h3,
+.principle-card h3,
+.split-content h2,
+.section-heading h2,
+.final-content h2 {
+    position: relative;
+}
+
+.roadmap-card h3::after,
+.feature-card h3::after,
+.principle-card h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 28px;
+    height: 1px;
+    background: var(--roadmap-cyan);
+    box-shadow:
+        0 0 7px rgba(0, 234, 255, 0.65);
+    opacity: 0.55;
+}
+
+/* =========================================================
+   RESPONSIVE TYPOGRAPHY
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .hero-kicker {
+        font-size: 0.57rem;
+        letter-spacing: 0.24em;
+    }
+
+    .hero-subtitle {
+        font-size: 0.57rem;
+        letter-spacing: 0.21em;
+    }
+
+    .hero-process {
+        font-size: 0.49rem;
+        letter-spacing: 0.1em;
+    }
+
+    .hero-process i {
+        margin: 0 2px;
+    }
+
+    .section-eyebrow {
+        font-size: 0.52rem;
+        letter-spacing: 0.22em;
+    }
+
+    .section-heading h2,
+    .split-content h2,
+    .final-content h2 {
+        font-size: clamp(1.8rem, 9vw, 2.7rem);
+    }
+
+    .section-heading p,
+    .split-content > p,
+    .final-content > p {
+        font-size: 0.8rem;
+        line-height: 1.75;
+    }
+
+    .roadmap-card h3 {
+        font-size: 1rem;
+    }
+
+    .roadmap-card > p {
+        font-size: 0.72rem;
+    }
+
+    .roadmap-list li {
+        font-size: 0.45rem;
+    }
+
+    .feature-card p,
+    .principle-card p {
+        font-size: 0.68rem;
+    }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .roadmap-card *,
+    .feature-card *,
+    .principle-card *,
+    .hero *,
+    .core-system * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
 </head>
 
 <body id="top">
@@ -28,7 +706,9 @@
             <a href="capabilities.html">CAPABILITIES</a>
         </nav>
 
-        <a href="index.html" class="brand brand-center" aria-label="JAVAS home">
+        <a href="index.html"
+           class="brand brand-center"
+           aria-label="JAVAS home">
             <span class="brand-logo">JAVAS</span>
         </a>
 
@@ -46,13 +726,14 @@
     </div>
 </header>
 
+
 <main>
 
-<!-- =========================================================
-     ROADMAP HERO
-========================================================= -->
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
-<section class="hero" id="roadmap">
+<section class="hero">
 
     <div class="hero-hud">
         <div class="hud-ring hud-ring-one"></div>
@@ -90,9 +771,9 @@
         </div>
 
         <div class="hero-actions">
-            <a href="#timeline" class="primary-button">
+            <a href="#roadmap" class="primary-button">
                 VIEW ROADMAP
-                <span>↓</span>
+                <span>→</span>
             </a>
 
             <a href="architecture.html" class="secondary-button">
@@ -102,6 +783,7 @@
         </div>
 
     </div>
+
 
     <aside class="hero-panel hero-panel-left">
 
@@ -144,6 +826,7 @@
 
     </aside>
 
+
     <aside class="hero-panel hero-panel-right">
 
         <div class="panel-header">
@@ -158,38 +841,39 @@
         <div class="hero-activity">
 
             <div class="hero-activity-line">
-                <span class="activity-time">01</span>
+                <span class="activity-time">00:00:01</span>
                 <span class="activity-type">CORE</span>
-                <span>Foundation established</span>
+                <span>Foundation systems established</span>
             </div>
 
             <div class="hero-activity-line">
-                <span class="activity-time">02</span>
-                <span class="activity-type">MIND</span>
-                <span>Cognitive pipeline evolving</span>
+                <span class="activity-time">00:00:02</span>
+                <span class="activity-type">COGNITION</span>
+                <span>Reasoning systems evolving</span>
             </div>
 
             <div class="hero-activity-line">
-                <span class="activity-time">03</span>
-                <span class="activity-type">VISION</span>
-                <span>Perception expanding</span>
+                <span class="activity-time">00:00:03</span>
+                <span class="activity-type">PERCEPTION</span>
+                <span>Multimodal expansion planned</span>
             </div>
 
             <div class="hero-activity-line">
-                <span class="activity-time">04</span>
-                <span class="activity-type">AUTO</span>
-                <span>Autonomous systems developing</span>
+                <span class="activity-time">00:00:04</span>
+                <span class="activity-type">AUTONOMY</span>
+                <span>Action architecture developing</span>
             </div>
 
             <div class="hero-activity-line">
-                <span class="activity-time">05</span>
-                <span class="activity-type">FUTURE</span>
-                <span>Adaptive ecosystem planned</span>
+                <span class="activity-time">00:00:05</span>
+                <span class="activity-type">EVOLUTION</span>
+                <span>Controlled improvement framework</span>
             </div>
 
         </div>
 
     </aside>
+
 
     <!-- ENERGY CORE -->
 
@@ -244,7 +928,9 @@
 
         <div class="core-caption">
             <span class="core-caption-label">JAVAS CORE</span>
-            <span class="core-caption-status">EVOLUTION ENGINE</span>
+            <span class="core-caption-status">
+                EVOLUTION ENGINE
+            </span>
         </div>
 
     </div>
@@ -252,11 +938,11 @@
 </section>
 
 
-<!-- =========================================================
-     ROADMAP INTRO
-========================================================= -->
+<!-- =====================================================
+     INTRO
+     ===================================================== -->
 
-<section class="section section-introduction">
+<section class="content-section roadmap-intro">
 
     <div class="section-heading">
 
@@ -266,56 +952,50 @@
 
         <h2>
             BUILDING JAVAS
+            <br>
             <span>STEP BY STEP</span>
         </h2>
 
         <p>
-            JAVAS is being developed as a continuously expanding artificial
-            intelligence platform. Each stage strengthens the core while
-            introducing new perception, reasoning, memory, autonomy,
-            intelligence and adaptation capabilities.
+            JAVAS is being developed as a modular autonomous intelligence
+            platform. Each stage expands the system while preserving
+            control, observability, reliability and a clear separation
+            between intelligence, perception and action.
         </p>
 
     </div>
 
+
     <div class="signal-system">
 
-        <div class="signal-line"></div>
-
         <div class="signal-item">
-            <span class="signal-index">01</span>
-            <strong>FOUNDATION</strong>
-            <small>CORE SYSTEMS</small>
+            <span class="signal-label">FOUNDATION</span>
+            <span class="signal-value">CORE SYSTEMS</span>
         </div>
 
         <div class="signal-item">
-            <span class="signal-index">02</span>
-            <strong>COGNITION</strong>
-            <small>REASONING</small>
+            <span class="signal-label">COGNITION</span>
+            <span class="signal-value">REASONING</span>
         </div>
 
         <div class="signal-item">
-            <span class="signal-index">03</span>
-            <strong>PERCEPTION</strong>
-            <small>VISION + VOICE</small>
+            <span class="signal-label">PERCEPTION</span>
+            <span class="signal-value">VISION + VOICE</span>
         </div>
 
         <div class="signal-item">
-            <span class="signal-index">04</span>
-            <strong>AUTONOMY</strong>
-            <small>ACTIONS</small>
+            <span class="signal-label">AUTONOMY</span>
+            <span class="signal-value">ACTIONS</span>
         </div>
 
         <div class="signal-item">
-            <span class="signal-index">05</span>
-            <strong>ADAPTATION</strong>
-            <small>SELF-IMPROVEMENT</small>
+            <span class="signal-label">ADAPTATION</span>
+            <span class="signal-value">SELF-IMPROVEMENT</span>
         </div>
 
         <div class="signal-item">
-            <span class="signal-index">06</span>
-            <strong>ECOSYSTEM</strong>
-            <small>CONNECTED INTELLIGENCE</small>
+            <span class="signal-label">ECOSYSTEM</span>
+            <span class="signal-value">CONNECTED INTELLIGENCE</span>
         </div>
 
     </div>
@@ -323,11 +1003,11 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      ROADMAP TIMELINE
-========================================================= -->
+     ===================================================== -->
 
-<section class="section" id="timeline">
+<section class="content-section" id="roadmap">
 
     <div class="section-heading">
 
@@ -337,13 +1017,14 @@
 
         <h2>
             THE EVOLUTION
+            <br>
             <span>OF THE CORE</span>
         </h2>
 
         <p>
-            The roadmap represents the direction of JAVAS development.
-            Individual capabilities can evolve in parallel as the platform
-            grows.
+            The roadmap represents the progression from the current
+            JAVAS foundation toward a broader autonomous intelligence
+            ecosystem.
         </p>
 
     </div>
@@ -351,40 +1032,25 @@
 
     <div class="roadmap-grid">
 
+        <!-- 01 -->
 
-        <!-- PHASE 01 -->
+        <article class="roadmap-card">
 
-        <article class="roadmap-card roadmap-card-complete">
-
-            <div class="roadmap-top">
-
-                <span class="roadmap-number">
-                    01
-                </span>
-
-                <span class="roadmap-state">
-                    FOUNDATION
-                </span>
-
+            <div class="roadmap-card-top">
+                <span class="roadmap-card-index">01</span>
+                <span class="roadmap-card-state">FOUNDATION</span>
             </div>
 
-            <div class="roadmap-icon">
-                ◉
-            </div>
-
-            <h3>
-                CORE FOUNDATION
-            </h3>
+            <h3>CORE FOUNDATION</h3>
 
             <p>
-                Establish the foundational architecture required for JAVAS
-                to operate as a unified intelligence platform.
+                Establish the fundamental infrastructure required for
+                JAVAS to understand requests, maintain context,
+                reason over information and coordinate actions.
             </p>
 
             <ul class="roadmap-list">
-
                 <li>Core application architecture</li>
-                <li>Orchestrator pipeline</li>
                 <li>Intent understanding</li>
                 <li>Context management</li>
                 <li>Reasoning engine</li>
@@ -392,19 +1058,23 @@
                 <li>Planning engine</li>
                 <li>Action routing</li>
                 <li>Search infrastructure</li>
+                <li>Memory foundation</li>
                 <li>Response generation</li>
-
             </ul>
 
             <div class="roadmap-progress">
 
-                <div class="roadmap-progress-label">
-                    <span>STATUS</span>
-                    <strong>FOUNDATION ESTABLISHED</strong>
+                <div class="progress-label">
+                    <span>PROGRESS</span>
+                    <strong>100%</strong>
                 </div>
 
-                <div class="roadmap-progress-bar">
-                    <span style="width: 100%;"></span>
+                <div class="progress-bar">
+                    <span style="width:100%"></span>
+                </div>
+
+                <div class="progress-state">
+                    FOUNDATION ESTABLISHED
                 </div>
 
             </div>
@@ -412,120 +1082,99 @@
         </article>
 
 
-        <!-- PHASE 02 -->
-
-        <article class="roadmap-card roadmap-card-active">
-
-            <div class="roadmap-top">
-
-                <span class="roadmap-number">
-                    02
-                </span>
-
-                <span class="roadmap-state">
-                    ACTIVE
-                </span>
-
-            </div>
-
-            <div class="roadmap-icon">
-                ◎
-            </div>
-
-            <h3>
-                COGNITIVE INTELLIGENCE
-            </h3>
-
-            <p>
-                Strengthen JAVAS's ability to understand context, reason
-                through problems, maintain memory and generate more useful
-                responses.
-            </p>
-
-            <ul class="roadmap-list">
-
-                <li>Advanced reasoning</li>
-                <li>Persistent contextual memory</li>
-                <li>Topic tracking</li>
-                <li>Multi-step planning</li>
-                <li>Decision refinement</li>
-                <li>Research synthesis</li>
-                <li>Speech-ready responses</li>
-                <li>Long-context understanding</li>
-                <li>Knowledge organization</li>
-                <li>Personalized interaction</li>
-
-            </ul>
-
-            <div class="roadmap-progress">
-
-                <div class="roadmap-progress-label">
-                    <span>STATUS</span>
-                    <strong>IN DEVELOPMENT</strong>
-                </div>
-
-                <div class="roadmap-progress-bar">
-                    <span style="width: 72%;"></span>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- PHASE 03 -->
+        <!-- 02 -->
 
         <article class="roadmap-card">
 
-            <div class="roadmap-top">
-
-                <span class="roadmap-number">
-                    03
-                </span>
-
-                <span class="roadmap-state">
-                    NEXT
-                </span>
-
+            <div class="roadmap-card-top">
+                <span class="roadmap-card-index">02</span>
+                <span class="roadmap-card-state">ACTIVE</span>
             </div>
 
-            <div class="roadmap-icon">
-                ◌
-            </div>
-
-            <h3>
-                MULTIMODAL PERCEPTION
-            </h3>
+            <h3>COGNITIVE INTELLIGENCE</h3>
 
             <p>
-                Expand JAVAS beyond text by giving the platform stronger
-                visual, audio and environmental perception.
+                Expand the cognitive layer so JAVAS can reason across
+                increasingly complex tasks and coordinate multiple
+                intelligence systems.
             </p>
 
             <ul class="roadmap-list">
+                <li>Advanced reasoning</li>
+                <li>Multi-step planning</li>
+                <li>Contextual decision making</li>
+                <li>Task decomposition</li>
+                <li>Research intelligence</li>
+                <li>Knowledge synthesis</li>
+                <li>Long-term context</li>
+                <li>Tool selection</li>
+                <li>Result evaluation</li>
+                <li>Response intelligence</li>
+            </ul>
 
+            <div class="roadmap-progress">
+
+                <div class="progress-label">
+                    <span>PROGRESS</span>
+                    <strong>72%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <span style="width:72%"></span>
+                </div>
+
+                <div class="progress-state">
+                    IN DEVELOPMENT
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 03 -->
+
+        <article class="roadmap-card">
+
+            <div class="roadmap-card-top">
+                <span class="roadmap-card-index">03</span>
+                <span class="roadmap-card-state">NEXT</span>
+            </div>
+
+            <h3>MULTIMODAL PERCEPTION</h3>
+
+            <p>
+                Expand JAVAS beyond text into a multimodal perception
+                system capable of interpreting visual, audio and
+                environmental information.
+            </p>
+
+            <ul class="roadmap-list">
                 <li>Computer vision</li>
                 <li>Object detection</li>
                 <li>Person tracking</li>
-                <li>Scene understanding</li>
-                <li>Visual memory</li>
+                <li>Image understanding</li>
+                <li>Voice input</li>
                 <li>Speech recognition</li>
-                <li>Voice interaction</li>
-                <li>Audio analysis</li>
+                <li>Text-to-speech</li>
+                <li>Visual context</li>
+                <li>Environmental perception</li>
                 <li>Multimodal reasoning</li>
-                <li>Environment awareness</li>
-
             </ul>
 
             <div class="roadmap-progress">
 
-                <div class="roadmap-progress-label">
-                    <span>STATUS</span>
-                    <strong>EXPANSION PLANNED</strong>
+                <div class="progress-label">
+                    <span>PROGRESS</span>
+                    <strong>45%</strong>
                 </div>
 
-                <div class="roadmap-progress-bar">
-                    <span style="width: 45%;"></span>
+                <div class="progress-bar">
+                    <span style="width:45%"></span>
+                </div>
+
+                <div class="progress-state">
+                    EXPANSION PLANNED
                 </div>
 
             </div>
@@ -533,59 +1182,49 @@
         </article>
 
 
-        <!-- PHASE 04 -->
+        <!-- 04 -->
 
         <article class="roadmap-card">
 
-            <div class="roadmap-top">
-
-                <span class="roadmap-number">
-                    04
-                </span>
-
-                <span class="roadmap-state">
-                    FUTURE
-                </span>
-
+            <div class="roadmap-card-top">
+                <span class="roadmap-card-index">04</span>
+                <span class="roadmap-card-state">FUTURE</span>
             </div>
 
-            <div class="roadmap-icon">
-                ◇
-            </div>
-
-            <h3>
-                AUTONOMOUS ACTION
-            </h3>
+            <h3>AUTONOMOUS ACTION</h3>
 
             <p>
-                Enable JAVAS to safely move from understanding and planning
-                toward controlled execution across the user's environment.
+                Give JAVAS controlled interfaces for interacting with
+                software, files, applications and the surrounding
+                computing environment.
             </p>
 
             <ul class="roadmap-list">
-
-                <li>Application interaction</li>
+                <li>Action authorization</li>
+                <li>Application control</li>
                 <li>File operations</li>
-                <li>Development environment control</li>
-                <li>Document workflows</li>
-                <li>Data processing</li>
                 <li>Browser interaction</li>
-                <li>Task automation</li>
-                <li>Permission-aware execution</li>
-                <li>Action verification</li>
-                <li>Observation and recovery</li>
-
+                <li>Development environment control</li>
+                <li>Document automation</li>
+                <li>Task execution</li>
+                <li>Action observation</li>
+                <li>Failure recovery</li>
+                <li>Permission boundaries</li>
             </ul>
 
             <div class="roadmap-progress">
 
-                <div class="roadmap-progress-label">
-                    <span>STATUS</span>
-                    <strong>ARCHITECTURE IN PROGRESS</strong>
+                <div class="progress-label">
+                    <span>PROGRESS</span>
+                    <strong>32%</strong>
                 </div>
 
-                <div class="roadmap-progress-bar">
-                    <span style="width: 32%;"></span>
+                <div class="progress-bar">
+                    <span style="width:32%"></span>
+                </div>
+
+                <div class="progress-state">
+                    ARCHITECTURE IN PROGRESS
                 </div>
 
             </div>
@@ -593,60 +1232,49 @@
         </article>
 
 
-        <!-- PHASE 05 -->
+        <!-- 05 -->
 
         <article class="roadmap-card">
 
-            <div class="roadmap-top">
-
-                <span class="roadmap-number">
-                    05
-                </span>
-
-                <span class="roadmap-state">
-                    FUTURE
-                </span>
-
+            <div class="roadmap-card-top">
+                <span class="roadmap-card-index">05</span>
+                <span class="roadmap-card-state">FUTURE</span>
             </div>
 
-            <div class="roadmap-icon">
-                ✦
-            </div>
-
-            <h3>
-                CONTROLLED SELF-IMPROVEMENT
-            </h3>
+            <h3>CONTROLLED SELF-IMPROVEMENT</h3>
 
             <p>
-                Introduce controlled mechanisms through which JAVAS can
-                inspect, test and improve parts of its own software system
-                while maintaining human authorization.
+                Build a controlled framework through which JAVAS can
+                identify improvement opportunities, propose changes,
+                test them and apply approved modifications.
             </p>
 
             <ul class="roadmap-list">
-
-                <li>System diagnostics</li>
-                <li>Code inspection</li>
+                <li>System observation</li>
                 <li>Performance analysis</li>
-                <li>Improvement proposals</li>
+                <li>Improvement detection</li>
+                <li>Change proposals</li>
                 <li>Sandbox testing</li>
-                <li>Regression testing</li>
-                <li>Versioned modifications</li>
+                <li>Regression evaluation</li>
+                <li>Human authorization</li>
+                <li>Version management</li>
                 <li>Rollback mechanisms</li>
-                <li>Permission controls</li>
-                <li>Human approval gates</li>
-
+                <li>Audit history</li>
             </ul>
 
             <div class="roadmap-progress">
 
-                <div class="roadmap-progress-label">
-                    <span>STATUS</span>
-                    <strong>CONTROLLED DEVELOPMENT</strong>
+                <div class="progress-label">
+                    <span>PROGRESS</span>
+                    <strong>25%</strong>
                 </div>
 
-                <div class="roadmap-progress-bar">
-                    <span style="width: 25%;"></span>
+                <div class="progress-bar">
+                    <span style="width:25%"></span>
+                </div>
+
+                <div class="progress-state">
+                    CONTROLLED DEVELOPMENT
                 </div>
 
             </div>
@@ -654,60 +1282,49 @@
         </article>
 
 
-        <!-- PHASE 06 -->
+        <!-- 06 -->
 
         <article class="roadmap-card">
 
-            <div class="roadmap-top">
-
-                <span class="roadmap-number">
-                    06
-                </span>
-
-                <span class="roadmap-state">
-                    VISION
-                </span>
-
+            <div class="roadmap-card-top">
+                <span class="roadmap-card-index">06</span>
+                <span class="roadmap-card-state">VISION</span>
             </div>
 
-            <div class="roadmap-icon">
-                ⬡
-            </div>
-
-            <h3>
-                JAVAS INTELLIGENCE ECOSYSTEM
-            </h3>
+            <h3>JAVAS INTELLIGENCE ECOSYSTEM</h3>
 
             <p>
-                Transform JAVAS into a broader intelligence ecosystem capable
-                of connecting its core with models, tools, services,
-                applications, devices and specialized intelligence modules.
+                Develop JAVAS into a connected intelligence ecosystem
+                combining language models, specialized models, tools,
+                memory, perception and environmental interfaces.
             </p>
 
             <ul class="roadmap-list">
-
-                <li>Hybrid AI architecture</li>
-                <li>Specialized intelligence agents</li>
-                <li>Local and remote models</li>
-                <li>Independent search infrastructure</li>
-                <li>Tool ecosystem</li>
-                <li>Developer interfaces</li>
-                <li>External service integration</li>
-                <li>Distributed intelligence</li>
-                <li>Knowledge infrastructure</li>
-                <li>JAVAS platform APIs</li>
-
+                <li>Independent JAVAS core</li>
+                <li>Hybrid intelligence</li>
+                <li>Specialized AI models</li>
+                <li>Personal knowledge systems</li>
+                <li>Distributed tools</li>
+                <li>Connected services</li>
+                <li>Advanced perception</li>
+                <li>Autonomous workflows</li>
+                <li>Adaptive intelligence</li>
+                <li>JAVAS developer ecosystem</li>
             </ul>
 
             <div class="roadmap-progress">
 
-                <div class="roadmap-progress-label">
-                    <span>STATUS</span>
-                    <strong>LONG-TERM VISION</strong>
+                <div class="progress-label">
+                    <span>PROGRESS</span>
+                    <strong>12%</strong>
                 </div>
 
-                <div class="roadmap-progress-bar">
-                    <span style="width: 12%;"></span>
+                <div class="progress-bar">
+                    <span style="width:12%"></span>
+                </div>
+
+                <div class="progress-state">
+                    LONG-TERM VISION
                 </div>
 
             </div>
@@ -719,13 +1336,13 @@
 </section>
 
 
-<!-- =========================================================
-     DATA SCIENCE + MACHINE LEARNING ROADMAP
-========================================================= -->
+<!-- =====================================================
+     DATA SCIENCE + MACHINE LEARNING
+     ===================================================== -->
 
-<section class="section section-dark">
+<section class="content-section split-section">
 
-    <div class="section-heading">
+    <div class="split-content">
 
         <div class="section-eyebrow">
             INTELLIGENCE EXPANSION
@@ -733,13 +1350,16 @@
 
         <h2>
             DATA SCIENCE &
+            <br>
             <span>MACHINE LEARNING</span>
         </h2>
 
         <p>
-            JAVAS is also designed to grow into a practical intelligence
-            environment for data analysis, experimentation and machine
-            learning.
+            JAVAS is intended to become more capable in data analysis,
+            machine learning and intelligent information processing.
+            These capabilities will allow the platform to work with
+            datasets, models and analytical workflows instead of
+            operating only as a conversational system.
         </p>
 
     </div>
@@ -749,24 +1369,20 @@
 
         <article class="feature-card">
 
-            <span class="feature-index">
-                DS / 01
-            </span>
+            <span class="feature-index">01</span>
 
-            <h3>
-                DATA ANALYSIS
-            </h3>
+            <h3>DATA ANALYSIS</h3>
 
             <p>
-                Import, inspect, clean, transform and analyze datasets while
-                explaining findings in natural language.
+                Work with structured and unstructured data,
+                identify patterns, summarize information and
+                support analytical decision making.
             </p>
 
             <div class="feature-tags">
-                <span>PYTHON</span>
-                <span>PANDAS</span>
-                <span>NUMPY</span>
-                <span>VISUALIZATION</span>
+                <span>DATA</span>
+                <span>ANALYSIS</span>
+                <span>INSIGHTS</span>
             </div>
 
         </article>
@@ -774,24 +1390,20 @@
 
         <article class="feature-card">
 
-            <span class="feature-index">
-                ML / 02
-            </span>
+            <span class="feature-index">02</span>
 
-            <h3>
-                MODEL DEVELOPMENT
-            </h3>
+            <h3>MODEL DEVELOPMENT</h3>
 
             <p>
-                Support machine-learning workflows from data preparation
-                through training, evaluation and experimentation.
+                Support machine-learning workflows including
+                experimentation, evaluation, model selection
+                and controlled deployment.
             </p>
 
             <div class="feature-tags">
+                <span>MODELS</span>
                 <span>TRAINING</span>
                 <span>EVALUATION</span>
-                <span>MODELS</span>
-                <span>EXPERIMENTS</span>
             </div>
 
         </article>
@@ -799,24 +1411,20 @@
 
         <article class="feature-card">
 
-            <span class="feature-index">
-                AI / 03
-            </span>
+            <span class="feature-index">03</span>
 
-            <h3>
-                INTELLIGENT ANALYSIS
-            </h3>
+            <h3>INTELLIGENT ANALYSIS</h3>
 
             <p>
-                Combine machine-learning systems with JAVAS reasoning so
-                results can be interpreted, compared and communicated.
+                Combine reasoning with data-processing tools so
+                JAVAS can transform raw information into useful
+                conclusions and recommendations.
             </p>
 
             <div class="feature-tags">
                 <span>REASONING</span>
-                <span>INSIGHTS</span>
-                <span>RECOMMENDATIONS</span>
-                <span>REPORTING</span>
+                <span>ML</span>
+                <span>DECISIONS</span>
             </div>
 
         </article>
@@ -826,120 +1434,104 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      SELF IMPROVEMENT
-========================================================= -->
+     ===================================================== -->
 
-<section class="section">
+<section class="content-section split-section">
 
-    <div class="split-section">
+    <div class="split-content">
 
-        <div class="split-content">
+        <div class="section-eyebrow">
+            ADAPTIVE DEVELOPMENT
+        </div>
 
-            <div class="section-eyebrow">
-                ADAPTIVE DEVELOPMENT
+        <h2>
+            A SYSTEM THAT
+            <br>
+            <span>CAN IMPROVE</span>
+        </h2>
+
+        <p>
+            Self-improvement within JAVAS is designed as a controlled
+            engineering process rather than unrestricted modification.
+            The system should observe itself, identify opportunities,
+            propose changes and validate those changes before they
+            become part of the active system.
+        </p>
+
+
+        <div class="bullet-system">
+
+            <div class="bullet-item">
+                <span>01</span>
+                <div>
+                    <strong>OBSERVE</strong>
+                    <p>Monitor system behaviour and performance.</p>
+                </div>
             </div>
 
-            <h2>
-                A SYSTEM THAT
-                <span>CAN IMPROVE</span>
-            </h2>
-
-            <p>
-                One of the long-term goals of JAVAS is controlled
-                self-improvement. The objective is not unrestricted
-                modification, but a structured development process where
-                JAVAS can identify weaknesses, propose improvements,
-                test changes and request authorization before deployment.
-            </p>
-
-            <div class="bullet-system">
-
-                <div class="bullet-item">
-                    <span>01</span>
-                    <div>
-                        <strong>OBSERVE</strong>
-                        <p>Identify system behaviour and performance.</p>
-                    </div>
+            <div class="bullet-item">
+                <span>02</span>
+                <div>
+                    <strong>ANALYZE</strong>
+                    <p>Identify weaknesses, inefficiencies and opportunities.</p>
                 </div>
+            </div>
 
-                <div class="bullet-item">
-                    <span>02</span>
-                    <div>
-                        <strong>ANALYZE</strong>
-                        <p>Determine potential causes and improvements.</p>
-                    </div>
+            <div class="bullet-item">
+                <span>03</span>
+                <div>
+                    <strong>PROPOSE</strong>
+                    <p>Generate possible improvements and modifications.</p>
                 </div>
+            </div>
 
-                <div class="bullet-item">
-                    <span>03</span>
-                    <div>
-                        <strong>PROPOSE</strong>
-                        <p>Generate a controlled improvement plan.</p>
-                    </div>
+            <div class="bullet-item">
+                <span>04</span>
+                <div>
+                    <strong>TEST</strong>
+                    <p>Validate proposed changes in a controlled environment.</p>
                 </div>
+            </div>
 
-                <div class="bullet-item">
-                    <span>04</span>
-                    <div>
-                        <strong>TEST</strong>
-                        <p>Validate the modification in isolation.</p>
-                    </div>
+            <div class="bullet-item">
+                <span>05</span>
+                <div>
+                    <strong>AUTHORIZE</strong>
+                    <p>Apply approved changes while preserving rollback capability.</p>
                 </div>
-
-                <div class="bullet-item">
-                    <span>05</span>
-                    <div>
-                        <strong>AUTHORIZE</strong>
-                        <p>Require appropriate human permission.</p>
-                    </div>
-                </div>
-
             </div>
 
         </div>
 
+    </div>
 
-        <div class="system-visual">
 
-            <div class="visual-frame">
+    <div class="system-visual">
 
-                <div class="visual-grid"></div>
+        <div class="visual-grid"></div>
 
-                <div class="visual-core">
+        <div class="visual-node visual-node-one">
+            OBSERVE
+        </div>
 
-                    <div class="visual-ring visual-ring-one"></div>
-                    <div class="visual-ring visual-ring-two"></div>
-                    <div class="visual-ring visual-ring-three"></div>
+        <div class="visual-node visual-node-two">
+            ANALYZE
+        </div>
 
-                    <span>
-                        SELF
-                    </span>
+        <div class="visual-node visual-node-three">
+            TEST
+        </div>
 
-                    <strong>
-                        IMPROVE
-                    </strong>
+        <div class="visual-node visual-node-four">
+            AUTHORIZE
+        </div>
 
-                </div>
-
-                <div class="visual-node visual-node-one">
-                    OBSERVE
-                </div>
-
-                <div class="visual-node visual-node-two">
-                    ANALYZE
-                </div>
-
-                <div class="visual-node visual-node-three">
-                    TEST
-                </div>
-
-                <div class="visual-node visual-node-four">
-                    AUTHORIZE
-                </div>
-
-            </div>
-
+        <div class="visual-core">
+            <span>JAVAS</span>
+            <strong>SELF</strong>
+            <strong>IMPROVE</strong>
         </div>
 
     </div>
@@ -947,11 +1539,11 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HYBRID INTELLIGENCE
-========================================================= -->
+     ===================================================== -->
 
-<section class="section section-dark">
+<section class="content-section">
 
     <div class="section-heading">
 
@@ -961,12 +1553,15 @@
 
         <h2>
             HYBRID
+            <br>
             <span>INTELLIGENCE</span>
         </h2>
 
         <p>
-            JAVAS is designed to combine different forms of intelligence
-            rather than depend on one model or one provider.
+            JAVAS is designed to coordinate different forms of
+            intelligence instead of depending on one model for every
+            task. Language models, vision models, specialized tools
+            and the JAVAS orchestration layer can work together.
         </p>
 
     </div>
@@ -975,48 +1570,45 @@
     <div class="architecture-flow">
 
         <div class="architecture-node">
-            <span>01</span>
-            <strong>JAVAS CORE</strong>
+            <span class="architecture-node-label">
+                JAVAS CORE
+            </span>
             <small>ORCHESTRATION</small>
         </div>
 
-        <div class="architecture-connector">
-            →
-        </div>
+        <div class="architecture-connector">→</div>
 
         <div class="architecture-node">
-            <span>02</span>
-            <strong>LANGUAGE MODELS</strong>
+            <span class="architecture-node-label">
+                LANGUAGE MODELS
+            </span>
             <small>LANGUAGE INTELLIGENCE</small>
         </div>
 
-        <div class="architecture-connector">
-            →
-        </div>
+        <div class="architecture-connector">→</div>
 
         <div class="architecture-node">
-            <span>03</span>
-            <strong>VISION MODELS</strong>
+            <span class="architecture-node-label">
+                VISION MODELS
+            </span>
             <small>PERCEPTION</small>
         </div>
 
-        <div class="architecture-connector">
-            →
-        </div>
+        <div class="architecture-connector">→</div>
 
         <div class="architecture-node">
-            <span>04</span>
-            <strong>SPECIALIZED TOOLS</strong>
+            <span class="architecture-node-label">
+                SPECIALIZED TOOLS
+            </span>
             <small>EXECUTION</small>
         </div>
 
-        <div class="architecture-connector">
-            →
-        </div>
+        <div class="architecture-connector">→</div>
 
         <div class="architecture-node">
-            <span>05</span>
-            <strong>ENVIRONMENT</strong>
+            <span class="architecture-node-label">
+                ENVIRONMENT
+            </span>
             <small>REAL WORLD</small>
         </div>
 
@@ -1025,11 +1617,11 @@
 </section>
 
 
-<!-- =========================================================
-     PRINCIPLES
-========================================================= -->
+<!-- =====================================================
+     DEVELOPMENT PRINCIPLES
+     ===================================================== -->
 
-<section class="section">
+<section class="content-section">
 
     <div class="section-heading">
 
@@ -1039,6 +1631,7 @@
 
         <h2>
             WHAT GUIDES
+            <br>
             <span>THE ROADMAP</span>
         </h2>
 
@@ -1048,98 +1641,51 @@
     <div class="principles-grid">
 
         <article class="principle-card">
-
-            <span>01</span>
-
-            <h3>
-                HUMAN CONTROL
-            </h3>
-
+            <h3>HUMAN CONTROL</h3>
             <p>
-                Powerful capabilities should remain permission-aware,
-                observable and controllable.
+                Powerful capabilities should remain subject to
+                explicit permissions and meaningful human oversight.
             </p>
-
         </article>
 
-
         <article class="principle-card">
-
-            <span>02</span>
-
-            <h3>
-                MODULARITY
-            </h3>
-
+            <h3>MODULARITY</h3>
             <p>
-                Intelligence components should be replaceable and
-                independently improvable.
+                Individual intelligence systems should remain
+                replaceable, testable and independently expandable.
             </p>
-
         </article>
 
-
         <article class="principle-card">
-
-            <span>03</span>
-
-            <h3>
-                OBSERVABILITY
-            </h3>
-
+            <h3>OBSERVABILITY</h3>
             <p>
-                JAVAS should expose system state, actions and important
-                execution events.
+                JAVAS should expose enough system state and activity
+                to make important operations understandable.
             </p>
-
         </article>
 
-
         <article class="principle-card">
-
-            <span>04</span>
-
-            <h3>
-                ADAPTABILITY
-            </h3>
-
+            <h3>ADAPTABILITY</h3>
             <p>
-                The platform should evolve as new models, tools and
-                technologies become available.
+                The architecture should support controlled learning,
+                improvement and expansion over time.
             </p>
-
         </article>
 
-
         <article class="principle-card">
-
-            <span>05</span>
-
-            <h3>
-                PRACTICAL INTELLIGENCE
-            </h3>
-
+            <h3>PRACTICAL INTELLIGENCE</h3>
             <p>
-                Intelligence should translate into useful work across
-                research, development, data and everyday computing.
+                Intelligence should translate into useful work,
+                analysis, automation and real-world problem solving.
             </p>
-
         </article>
 
-
         <article class="principle-card">
-
-            <span>06</span>
-
-            <h3>
-                CONTINUOUS DEVELOPMENT
-            </h3>
-
+            <h3>CONTINUOUS DEVELOPMENT</h3>
             <p>
-                JAVAS is treated as an evolving platform rather than a
-                finished static application.
+                JAVAS is treated as an evolving platform rather than
+                a static application with a fixed endpoint.
             </p>
-
         </article>
 
     </div>
@@ -1147,46 +1693,41 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FINAL CTA
-========================================================= -->
+     ===================================================== -->
 
-<section class="section final-section">
+<section class="final-section">
 
-    <div class="final-panel">
+    <div class="final-content">
 
-        <div class="final-panel-grid"></div>
+        <div class="section-eyebrow">
+            THE NEXT SYSTEM
+        </div>
 
-        <div class="final-content">
+        <h2>
+            THE CORE
+            <br>
+            <span>KEEPS EVOLVING.</span>
+        </h2>
 
-            <div class="section-eyebrow">
-                THE NEXT SYSTEM
-            </div>
+        <p>
+            JAVAS begins with a cognitive foundation and expands
+            toward perception, autonomous action, controlled
+            self-improvement and a connected intelligence ecosystem.
+        </p>
 
-            <h2>
-                THE CORE
-                <span>KEEPS EVOLVING.</span>
-            </h2>
+        <div class="hero-actions">
 
-            <p>
-                JAVAS begins with an intelligent core. The roadmap expands
-                that core into perception, reasoning, autonomy, adaptation
-                and eventually a complete personal intelligence ecosystem.
-            </p>
+            <a href="intelligence.html" class="primary-button">
+                EXPLORE INTELLIGENCE
+                <span>→</span>
+            </a>
 
-            <div class="hero-actions">
-
-                <a href="intelligence.html" class="primary-button">
-                    EXPLORE INTELLIGENCE
-                    <span>→</span>
-                </a>
-
-                <a href="capabilities.html" class="secondary-button">
-                    VIEW CAPABILITIES
-                    <span>⌘</span>
-                </a>
-
-            </div>
+            <a href="capabilities.html" class="secondary-button">
+                VIEW CAPABILITIES
+                <span>⌘</span>
+            </a>
 
         </div>
 
@@ -1197,13 +1738,13 @@
 </main>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+     ===================================================== -->
 
 <footer class="site-footer">
 
-    <div class="footer-inner">
+    <div class="footer-main">
 
         <div class="footer-brand">
 
@@ -1212,11 +1753,12 @@
             </div>
 
             <p>
-                Personal Autonomous Artificial Intelligence Platform.
+                Personal Autonomous Artificial Intelligence.
+                Designed as an evolving intelligence platform.
             </p>
 
             <span>
-                Created by Buyi Julius Xhen
+                CREATED BY BUYI JULIUS XHEN
             </span>
 
         </div>
@@ -1225,35 +1767,17 @@
         <div class="footer-links">
 
             <div>
-
                 <strong>PLATFORM</strong>
-
-                <a href="index.html">Home</a>
+                <a href="index.html">Platform</a>
                 <a href="intelligence.html">Intelligence</a>
                 <a href="capabilities.html">Capabilities</a>
-
             </div>
 
-
             <div>
-
                 <strong>SYSTEM</strong>
-
                 <a href="architecture.html">Architecture</a>
                 <a href="roadmap.html">Roadmap</a>
                 <a href="contact.html">Contact</a>
-
-            </div>
-
-
-            <div>
-
-                <strong>CORE</strong>
-
-                <a href="#top">Back to top</a>
-                <a href="index.html#platform">JAVAS Core</a>
-                <a href="architecture.html">System Design</a>
-
             </div>
 
         </div>
@@ -1264,15 +1788,11 @@
     <div class="footer-bottom">
 
         <span>
-            JAVAS © 2026
+            © 2026 JAVAS
         </span>
 
         <span>
             PERSONAL AUTONOMOUS ARTIFICIAL INTELLIGENCE
-        </span>
-
-        <span>
-            SYSTEM ONLINE
         </span>
 
     </div>
