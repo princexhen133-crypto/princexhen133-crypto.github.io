@@ -1224,3 +1224,624 @@ footer {
         transition-duration: 0.001ms !important;
     }
 }
+
+/* =========================================================
+   JAVAS — ENERGY CORE → INTELLIGENCE LINK SYSTEM
+   ========================================================= */
+
+.core-system {
+    --core-x: 0px;
+    --core-y: 0px;
+    position: relative;
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   CORE ENERGY FIELD
+   ========================================================= */
+
+.core-system::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    left: 50%;
+    top: 50%;
+    transform:
+        translate(
+            calc(-50% + var(--core-x)),
+            calc(-50% + var(--core-y))
+        );
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 234, 255, 0.12) 0%,
+            rgba(0, 234, 255, 0.05) 32%,
+            rgba(0, 234, 255, 0.015) 58%,
+            transparent 72%
+        );
+
+    filter: blur(8px);
+
+    opacity: 0.75;
+
+    pointer-events: none;
+
+    z-index: -2;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   CORE ACTIVE STATE
+   ========================================================= */
+
+.core-system.core-active::before {
+    opacity: 1;
+
+    animation:
+        javasCoreFieldPulse
+        900ms
+        ease-out;
+}
+
+
+@keyframes javasCoreFieldPulse {
+
+    0% {
+        transform:
+            translate(
+                calc(-50% + var(--core-x)),
+                calc(-50% + var(--core-y))
+            )
+            scale(0.86);
+
+        opacity: 0.35;
+    }
+
+    45% {
+        transform:
+            translate(
+                calc(-50% + var(--core-x)),
+                calc(-50% + var(--core-y))
+            )
+            scale(1.08);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(
+                calc(-50% + var(--core-x)),
+                calc(-50% + var(--core-y))
+            )
+            scale(1);
+
+        opacity: 0.75;
+    }
+}
+
+
+/* =========================================================
+   ENERGY PARTICLE LINES
+   ========================================================= */
+
+.core-system::after {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(
+            calc(-50% + var(--core-x)),
+            calc(-50% + var(--core-y))
+        );
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(0, 234, 255, 0.08);
+
+    box-shadow:
+        0 0 35px rgba(0, 234, 255, 0.04),
+        inset 0 0 35px rgba(0, 234, 255, 0.04);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation:
+        javasCoreOrbit
+        8s
+        linear
+        infinite;
+}
+
+
+@keyframes javasCoreOrbit {
+
+    from {
+        transform:
+            translate(
+                calc(-50% + var(--core-x)),
+                calc(-50% + var(--core-y))
+            )
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(
+                calc(-50% + var(--core-x)),
+                calc(-50% + var(--core-y))
+            )
+            rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   CORE ENERGY RINGS
+   ========================================================= */
+
+.energy-core .core-ring {
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.core-active .energy-core .core-ring {
+    box-shadow:
+        0 0 12px rgba(0, 234, 255, 0.55),
+        0 0 28px rgba(0, 234, 255, 0.25);
+
+    opacity: 1;
+}
+
+
+.core-active .energy-core .core-ring-one {
+    animation:
+        javasRingOne
+        850ms
+        ease-out;
+}
+
+
+.core-active .energy-core .core-ring-two {
+    animation:
+        javasRingTwo
+        850ms
+        ease-out;
+}
+
+
+.core-active .energy-core .core-ring-three {
+    animation:
+        javasRingThree
+        850ms
+        ease-out;
+}
+
+
+@keyframes javasRingOne {
+
+    0% {
+        transform: scale(0.88) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.12) rotate(8deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+
+@keyframes javasRingTwo {
+
+    0% {
+        transform: scale(0.92) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.16) rotate(-10deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+
+@keyframes javasRingThree {
+
+    0% {
+        transform: scale(0.95) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(6deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+
+/* =========================================================
+   CORE CENTER ENERGY
+   ========================================================= */
+
+.energy-core .core-center {
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+
+.core-system.core-active .core-center {
+    transform: scale(1.08);
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(0, 234, 255, 0.9)
+        )
+        drop-shadow(
+            0 0 28px
+            rgba(0, 234, 255, 0.55)
+        );
+}
+
+
+/* =========================================================
+   CORE → CONSOLE ENERGY BRIDGE
+   ========================================================= */
+
+.intelligence-console {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.intelligence-console::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: -100px;
+
+    width: 1px;
+    height: 100px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(0, 234, 255, 0.05),
+            rgba(0, 234, 255, 0.45)
+        );
+
+    opacity: 0.45;
+
+    transform-origin: bottom;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ACTIVE ENERGY BRIDGE
+   ========================================================= */
+
+.intelligence-console.console-active::before {
+    animation:
+        javasEnergyBridge
+        650ms
+        ease-out;
+}
+
+
+@keyframes javasEnergyBridge {
+
+    0% {
+        transform:
+            scaleY(0);
+
+        opacity: 0;
+    }
+
+    25% {
+        transform:
+            scaleY(0.45);
+
+        opacity: 0.8;
+    }
+
+    55% {
+        transform:
+            scaleY(1);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            scaleY(1);
+
+        opacity: 0.15;
+    }
+}
+
+
+/* =========================================================
+   PIPELINE ENERGY CONNECTIONS
+   ========================================================= */
+
+.pipeline-line {
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.pipeline-line::after {
+    content: "";
+
+    position: absolute;
+
+    left: -100%;
+    top: 50%;
+
+    width: 100%;
+    height: 2px;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 234, 255, 0.85),
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(0, 234, 255, 0.6);
+
+    opacity: 0;
+}
+
+
+.console-active .pipeline-line::after {
+    animation:
+        javasPipelinePulse
+        900ms
+        linear;
+}
+
+
+@keyframes javasPipelinePulse {
+
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   ACTIVE PIPELINE NODE
+   ========================================================= */
+
+.pipeline-node {
+    position: relative;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.pipeline-node.active {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(0, 234, 255, 0.8);
+
+    box-shadow:
+        0 0 18px
+        rgba(0, 234, 255, 0.18),
+        inset 0 0 18px
+        rgba(0, 234, 255, 0.05);
+}
+
+
+.pipeline-node.active::after {
+    content: "";
+
+    position: absolute;
+
+    inset: -5px;
+
+    border-radius: inherit;
+
+    border:
+        1px solid
+        rgba(0, 234, 255, 0.2);
+
+    animation:
+        javasNodePulse
+        1.2s
+        ease-out
+        infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes javasNodePulse {
+
+    0% {
+        opacity: 0.7;
+        transform: scale(0.96);
+    }
+
+    70% {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+}
+
+
+/* =========================================================
+   CONSOLE ACTIVE STATE
+   ========================================================= */
+
+.intelligence-console.console-active {
+    border-color:
+        rgba(0, 234, 255, 0.38);
+
+    box-shadow:
+        0 0 35px
+        rgba(0, 234, 255, 0.08),
+        inset 0 0 35px
+        rgba(0, 234, 255, 0.025);
+}
+
+
+/* =========================================================
+   CORE STATUS ACTIVE
+   ========================================================= */
+
+.core-status-value {
+    transition:
+        text-shadow 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.console-active .core-status-value {
+    transform: translateX(4px);
+
+    text-shadow:
+        0 0 8px
+        rgba(0, 234, 255, 0.9),
+        0 0 20px
+        rgba(0, 234, 255, 0.4);
+}
+
+
+/* =========================================================
+   ACTIVITY STREAM ENERGY
+   ========================================================= */
+
+.activity-line {
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.activity-line:first-child {
+    animation:
+        javasActivityArrival
+        500ms
+        ease-out;
+}
+
+
+@keyframes javasActivityArrival {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE ENERGY SYSTEM
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .core-system::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .core-system::after {
+        width: 250px;
+        height: 250px;
+    }
+
+    .intelligence-console::before {
+        display: none;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .core-system::after,
+    .core-active .energy-core .core-ring-one,
+    .core-active .energy-core .core-ring-two,
+    .core-active .energy-core .core-ring-three,
+    .pipeline-node.active::after,
+    .console-active .pipeline-line::after {
+        animation: none !important;
+    }
+
+}
