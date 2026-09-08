@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -175,7 +178,6 @@
             "inLanguage": "en"
         },
 
-
         {
             "@type": "SoftwareApplication",
             "@id": "https://princexhen133-crypto.github.io/#javas-roadmap",
@@ -208,24 +210,8 @@
                 "Hybrid Intelligence",
                 "JAVAS Intelligence Ecosystem",
                 "Human-Controlled AI Development"
-            ],
-            "keywords": [
-                "JAVAS AI",
-                "JAVAS",
-                "Autonomous Artificial Intelligence",
-                "Personal AI",
-                "Cognitive AI",
-                "AI Roadmap",
-                "Machine Learning",
-                "Data Science",
-                "Computer Vision",
-                "Voice AI",
-                "Hybrid Intelligence",
-                "Autonomous AI",
-                "AI Self-Improvement"
             ]
         },
-
 
         {
             "@type": "ItemList",
@@ -278,7 +264,6 @@
             ]
         },
 
-
         {
             "@type": "ItemList",
             "@id": "https://princexhen133-crypto.github.io/roadmap.html#intelligence-expansion",
@@ -306,7 +291,6 @@
             ]
         },
 
-
         {
             "@type": "Person",
             "@id": "https://princexhen133-crypto.github.io/#creator",
@@ -329,4 +313,1208 @@
     href="main.css"
 >
 
+
+<!-- =====================================================
+     ROADMAP PAGE STYLES
+     ===================================================== -->
+
+<style>
+
+.roadmap-page {
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+.roadmap-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 24px 70px;
+    text-align: center;
+}
+
+.roadmap-kicker {
+    margin-bottom: 18px;
+    color: #55d9ff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+}
+
+.roadmap-hero h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 0.95;
+    text-shadow:
+        0 0 18px rgba(65, 210, 255, 0.35),
+        0 0 55px rgba(65, 210, 255, 0.16);
+}
+
+.roadmap-hero h1 span {
+    color: #51dfff;
+}
+
+.roadmap-hero p {
+    max-width: 780px;
+    margin: 28px auto 0;
+    color: rgba(220, 240, 255, 0.72);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.roadmap-section {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto 90px;
+}
+
+.section-heading {
+    margin-bottom: 42px;
+    text-align: center;
+}
+
+.section-heading .eyebrow {
+    display: block;
+    margin-bottom: 12px;
+    color: #4bdcff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    letter-spacing: 0.04em;
+}
+
+.section-heading p {
+    max-width: 700px;
+    margin: 16px auto 0;
+    color: rgba(215, 235, 250, 0.64);
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   ROADMAP TIMELINE
+   ===================================================== */
+
+.roadmap-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.roadmap-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(67, 216, 255, 0.65) 8%,
+            rgba(67, 216, 255, 0.65) 92%,
+            transparent
+        );
+    transform: translateX(-50%);
+}
+
+.roadmap-stage {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    margin-bottom: 55px;
+}
+
+.roadmap-stage:last-child {
+    margin-bottom: 0;
+}
+
+.roadmap-stage:nth-child(even) .stage-content {
+    grid-column: 2;
+}
+
+.roadmap-stage:nth-child(even) .stage-node {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.stage-content {
+    padding: 30px;
+    border: 1px solid rgba(75, 220, 255, 0.16);
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(11, 27, 45, 0.78),
+            rgba(3, 11, 22, 0.92)
+        );
+    box-shadow:
+        0 0 35px rgba(0, 170, 255, 0.06),
+        inset 0 0 25px rgba(70, 210, 255, 0.025);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.stage-content:hover {
+    transform: translateY(-5px);
+    border-color: rgba(75, 220, 255, 0.42);
+    box-shadow:
+        0 0 45px rgba(0, 190, 255, 0.12),
+        inset 0 0 30px rgba(70, 210, 255, 0.035);
+}
+
+.stage-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(77, 220, 255, 0.5);
+    border-radius: 50%;
+    color: #65e5ff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    box-shadow: 0 0 18px rgba(55, 210, 255, 0.15);
+}
+
+.stage-content h3 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 1.45rem;
+}
+
+.stage-content p {
+    margin: 0;
+    color: rgba(215, 235, 250, 0.68);
+    line-height: 1.75;
+}
+
+.stage-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.stage-list span {
+    padding: 7px 10px;
+    border: 1px solid rgba(80, 215, 255, 0.14);
+    border-radius: 999px;
+    background: rgba(65, 200, 255, 0.045);
+    color: rgba(205, 240, 255, 0.75);
+    font-size: 0.72rem;
+}
+
+.stage-node {
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #65e5ff;
+    border-radius: 50%;
+    background: #020711;
+    box-shadow:
+        0 0 12px #48dfff,
+        0 0 28px rgba(72, 223, 255, 0.55);
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+
+/* =====================================================
+   EXPANSION GRID
+   ===================================================== */
+
+.expansion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.expansion-card {
+    position: relative;
+    min-height: 220px;
+    padding: 30px;
+    overflow: hidden;
+    border: 1px solid rgba(72, 218, 255, 0.14);
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10, 28, 47, 0.8),
+            rgba(2, 10, 20, 0.92)
+        );
+}
+
+.expansion-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(82, 224, 255, 0.65),
+        transparent
+    );
+}
+
+.expansion-index {
+    color: rgba(80, 220, 255, 0.55);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+}
+
+.expansion-card h3 {
+    margin: 18px 0 12px;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.expansion-card p {
+    margin: 0;
+    color: rgba(215, 235, 250, 0.65);
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   FUTURE ECOSYSTEM
+   ===================================================== */
+
+.ecosystem-panel {
+    position: relative;
+    padding: 55px;
+    overflow: hidden;
+    border: 1px solid rgba(70, 220, 255, 0.2);
+    border-radius: 24px;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(22, 123, 171, 0.14),
+            transparent 48%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(8, 25, 42, 0.92),
+            rgba(2, 9, 18, 0.98)
+        );
+    text-align: center;
+}
+
+.ecosystem-core {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 125px;
+    margin-bottom: 28px;
+    border: 1px solid rgba(82, 225, 255, 0.55);
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(75, 220, 255, 0.2),
+            rgba(30, 120, 180, 0.05) 45%,
+            transparent 70%
+        );
+    box-shadow:
+        0 0 30px rgba(68, 220, 255, 0.22),
+        0 0 80px rgba(40, 150, 255, 0.1),
+        inset 0 0 30px rgba(70, 220, 255, 0.1);
+}
+
+.ecosystem-core span {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.ecosystem-panel h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.ecosystem-panel > p {
+    max-width: 760px;
+    margin: 20px auto 35px;
+    color: rgba(215, 235, 250, 0.68);
+    line-height: 1.8;
+}
+
+.ecosystem-nodes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.ecosystem-nodes span {
+    padding: 10px 16px;
+    border: 1px solid rgba(70, 215, 255, 0.18);
+    border-radius: 999px;
+    color: rgba(210, 242, 255, 0.78);
+    background: rgba(65, 210, 255, 0.04);
+    font-size: 0.78rem;
+}
+
+
+/* =====================================================
+   CONTROLLED EVOLUTION
+   ===================================================== */
+
+.evolution-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.evolution-card {
+    padding: 25px;
+    border: 1px solid rgba(73, 218, 255, 0.13);
+    border-radius: 16px;
+    background: rgba(6, 19, 32, 0.72);
+}
+
+.evolution-card strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #5de2ff;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.evolution-card p {
+    margin: 0;
+    color: rgba(215, 235, 250, 0.63);
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   CTA
+   ===================================================== */
+
+.roadmap-cta {
+    width: min(950px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 60px 30px;
+    border-top: 1px solid rgba(70, 220, 255, 0.16);
+    border-bottom: 1px solid rgba(70, 220, 255, 0.16);
+    text-align: center;
+}
+
+.roadmap-cta h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.roadmap-cta p {
+    max-width: 650px;
+    margin: 18px auto 28px;
+    color: rgba(215, 235, 250, 0.65);
+    line-height: 1.7;
+}
+
+.roadmap-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.roadmap-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    padding: 13px 20px;
+    border: 1px solid rgba(77, 220, 255, 0.32);
+    border-radius: 999px;
+    color: #dff9ff;
+    background: rgba(60, 210, 255, 0.055);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.roadmap-button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(77, 220, 255, 0.65);
+    background: rgba(60, 210, 255, 0.1);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 850px) {
+
+    .roadmap-hero {
+        padding-top: 75px;
+    }
+
+    .roadmap-timeline::before {
+        left: 14px;
+    }
+
+    .roadmap-stage {
+        display: block;
+        margin-left: 35px;
+    }
+
+    .roadmap-stage:nth-child(even) .stage-content {
+        grid-column: auto;
+    }
+
+    .stage-node {
+        top: 34px;
+        left: -21px;
+        transform: none;
+    }
+
+    .expansion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .evolution-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ecosystem-panel {
+        padding: 40px 24px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .roadmap-section {
+        width: min(100% - 24px, 1180px);
+    }
+
+    .roadmap-hero {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .roadmap-stage {
+        margin-left: 28px;
+    }
+
+    .stage-content {
+        padding: 23px;
+    }
+
+    .evolution-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap-cta {
+        width: calc(100% - 24px);
+    }
+
+    .ecosystem-core {
+        width: 105px;
+        height: 105px;
+    }
+}
+
+</style>
+
 </head>
+
+
+<body>
+
+<div class="roadmap-page">
+
+
+<!-- =====================================================
+     HEADER / NAVIGATION
+     ===================================================== -->
+
+<header class="site-header">
+
+    <div class="site-logo">
+        JAVAS
+    </div>
+
+    <nav class="site-nav">
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="intelligence.html">
+            INTELLIGENCE
+        </a>
+
+        <a href="capabilities.html">
+            CAPABILITIES
+        </a>
+
+        <a href="architecture.html">
+            ARCHITECTURE
+        </a>
+
+        <a
+            href="roadmap.html"
+            class="active"
+        >
+            ROADMAP
+        </a>
+
+        <a href="contact.html">
+            CONTACT
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<main>
+
+<section class="roadmap-hero">
+
+    <div class="roadmap-kicker">
+        JAVAS / EVOLUTION PROTOCOL
+    </div>
+
+    <h1>
+        ROAD<span>MAP</span>
+    </h1>
+
+    <p>
+        JAVAS is designed as an evolving intelligence platform.
+        Its development moves from foundational cognitive systems
+        toward multimodal perception, autonomous action,
+        controlled self-improvement, data science, machine learning
+        and an interconnected artificial intelligence ecosystem.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     DEVELOPMENT ROADMAP
+     ===================================================== -->
+
+<section class="roadmap-section">
+
+    <div class="section-heading">
+
+        <span class="eyebrow">
+            DEVELOPMENT SEQUENCE
+        </span>
+
+        <h2>
+            From Core Intelligence to Autonomous Systems
+        </h2>
+
+        <p>
+            Each stage expands the capabilities of the system while
+            preserving observation, control, verification and
+            human-directed development.
+        </p>
+
+    </div>
+
+
+    <div class="roadmap-timeline">
+
+
+        <!-- STAGE 01 -->
+
+        <article class="roadmap-stage">
+
+            <div class="stage-content">
+
+                <div class="stage-number">
+                    01
+                </div>
+
+                <h3>
+                    Core Foundation
+                </h3>
+
+                <p>
+                    Establish the fundamental JAVAS intelligence
+                    architecture required to understand requests,
+                    maintain context, reason about problems, make
+                    decisions, create plans and produce useful responses.
+                </p>
+
+                <div class="stage-list">
+                    <span>Intent</span>
+                    <span>Context</span>
+                    <span>Reasoning</span>
+                    <span>Decision</span>
+                    <span>Planning</span>
+                    <span>Memory</span>
+                    <span>Search</span>
+                    <span>Responses</span>
+                </div>
+
+            </div>
+
+            <div class="stage-node"></div>
+
+        </article>
+
+
+        <!-- STAGE 02 -->
+
+        <article class="roadmap-stage">
+
+            <div class="stage-content">
+
+                <div class="stage-number">
+                    02
+                </div>
+
+                <h3>
+                    Cognitive Intelligence
+                </h3>
+
+                <p>
+                    Expand JAVAS beyond simple request processing into
+                    deeper reasoning, multi-step problem solving,
+                    research intelligence, knowledge synthesis and
+                    contextual decision making.
+                </p>
+
+                <div class="stage-list">
+                    <span>Deep Reasoning</span>
+                    <span>Research</span>
+                    <span>Knowledge Synthesis</span>
+                    <span>Planning</span>
+                    <span>Long-Term Context</span>
+                    <span>Decision Intelligence</span>
+                </div>
+
+            </div>
+
+            <div class="stage-node"></div>
+
+        </article>
+
+
+        <!-- STAGE 03 -->
+
+        <article class="roadmap-stage">
+
+            <div class="stage-content">
+
+                <div class="stage-number">
+                    03
+                </div>
+
+                <h3>
+                    Multimodal Perception
+                </h3>
+
+                <p>
+                    Give JAVAS the ability to observe and interpret
+                    multiple forms of information, including images,
+                    objects, people, environments, voice and other
+                    multimodal signals.
+                </p>
+
+                <div class="stage-list">
+                    <span>Computer Vision</span>
+                    <span>Object Detection</span>
+                    <span>Person Tracking</span>
+                    <span>Image Understanding</span>
+                    <span>Voice Input</span>
+                    <span>Speech Recognition</span>
+                </div>
+
+            </div>
+
+            <div class="stage-node"></div>
+
+        </article>
+
+
+        <!-- STAGE 04 -->
+
+        <article class="roadmap-stage">
+
+            <div class="stage-content">
+
+                <div class="stage-number">
+                    04
+                </div>
+
+                <h3>
+                    Autonomous Action
+                </h3>
+
+                <p>
+                    Extend intelligence into controlled interaction
+                    with digital environments. JAVAS will progressively
+                    coordinate applications, files, development tools,
+                    browsers and other software through permission-based
+                    execution.
+                </p>
+
+                <div class="stage-list">
+                    <span>Software Control</span>
+                    <span>File Operations</span>
+                    <span>Application Control</span>
+                    <span>Development Tools</span>
+                    <span>Browser Interaction</span>
+                    <span>Action Verification</span>
+                </div>
+
+            </div>
+
+            <div class="stage-node"></div>
+
+        </article>
+
+
+        <!-- STAGE 05 -->
+
+        <article class="roadmap-stage">
+
+            <div class="stage-content">
+
+                <div class="stage-number">
+                    05
+                </div>
+
+                <h3>
+                    Controlled Self-Improvement
+                </h3>
+
+                <p>
+                    Introduce mechanisms for JAVAS to observe its own
+                    performance, identify potential improvements,
+                    propose modifications, test changes in controlled
+                    environments and preserve stable versions.
+                </p>
+
+                <div class="stage-list">
+                    <span>Self-Observation</span>
+                    <span>Performance Analysis</span>
+                    <span>Improvement Proposals</span>
+                    <span>Sandbox Testing</span>
+                    <span>Authorization</span>
+                    <span>Rollback</span>
+                </div>
+
+            </div>
+
+            <div class="stage-node"></div>
+
+        </article>
+
+
+        <!-- STAGE 06 -->
+
+        <article class="roadmap-stage">
+
+            <div class="stage-content">
+
+                <div class="stage-number">
+                    06
+                </div>
+
+                <h3>
+                    JAVAS Intelligence Ecosystem
+                </h3>
+
+                <p>
+                    Connect the core intelligence system with specialized
+                    models, perception systems, tools, memory, external
+                    services and intelligent clients to create a broader
+                    hybrid artificial intelligence ecosystem.
+                </p>
+
+                <div class="stage-list">
+                    <span>Hybrid AI</span>
+                    <span>Language Models</span>
+                    <span>Vision Models</span>
+                    <span>Tools</span>
+                    <span>Memory</span>
+                    <span>Intelligent Clients</span>
+                </div>
+
+            </div>
+
+            <div class="stage-node"></div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DATA SCIENCE / MACHINE LEARNING
+     ===================================================== -->
+
+<section class="roadmap-section">
+
+    <div class="section-heading">
+
+        <span class="eyebrow">
+            INTELLIGENCE EXPANSION
+        </span>
+
+        <h2>
+            Data Science & Machine Learning
+        </h2>
+
+        <p>
+            JAVAS is also designed to become a development and
+            analytical partner for data science and machine learning,
+            helping transform raw information into models, insights
+            and intelligent decisions.
+        </p>
+
+    </div>
+
+
+    <div class="expansion-grid">
+
+
+        <article class="expansion-card">
+
+            <span class="expansion-index">
+                01 / DATA
+            </span>
+
+            <h3>
+                Data Analysis
+            </h3>
+
+            <p>
+                Support data preparation, exploration, statistical
+                analysis, visualization, pattern discovery and
+                interpretation of complex datasets.
+            </p>
+
+        </article>
+
+
+        <article class="expansion-card">
+
+            <span class="expansion-index">
+                02 / MODELS
+            </span>
+
+            <h3>
+                Machine Learning
+            </h3>
+
+            <p>
+                Assist with machine learning workflows including
+                feature engineering, model development, evaluation,
+                experimentation and iterative optimization.
+            </p>
+
+        </article>
+
+
+        <article class="expansion-card">
+
+            <span class="expansion-index">
+                03 / INTELLIGENCE
+            </span>
+
+            <h3>
+                Intelligent Data Analysis
+            </h3>
+
+            <p>
+                Combine reasoning with analytical systems so JAVAS can
+                interpret results, identify meaningful patterns and
+                communicate actionable conclusions.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FUTURE ECOSYSTEM
+     ===================================================== -->
+
+<section class="roadmap-section">
+
+    <div class="ecosystem-panel">
+
+        <div class="ecosystem-core">
+            <span>
+                JAVAS
+            </span>
+        </div>
+
+        <h2>
+            One Intelligence. Multiple Systems.
+        </h2>
+
+        <p>
+            The long-term direction is not a collection of isolated
+            AI features. JAVAS is intended to become a coordinated
+            intelligence layer capable of connecting reasoning,
+            perception, memory, models, tools, data and digital
+            environments.
+        </p>
+
+        <div class="ecosystem-nodes">
+
+            <span>
+                Cognitive Core
+            </span>
+
+            <span>
+                Language Models
+            </span>
+
+            <span>
+                Computer Vision
+            </span>
+
+            <span>
+                Voice Intelligence
+            </span>
+
+            <span>
+                Memory
+            </span>
+
+            <span>
+                Data Science
+            </span>
+
+            <span>
+                Machine Learning
+            </span>
+
+            <span>
+                Autonomous Tools
+            </span>
+
+            <span>
+                Intelligent Clients
+            </span>
+
+            <span>
+                Digital Environment
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTROLLED EVOLUTION
+     ===================================================== -->
+
+<section class="roadmap-section">
+
+    <div class="section-heading">
+
+        <span class="eyebrow">
+            EVOLUTION MODEL
+        </span>
+
+        <h2>
+            Intelligence That Evolves Under Control
+        </h2>
+
+        <p>
+            Future JAVAS development is intended to follow a controlled
+            improvement cycle rather than unrestricted modification.
+        </p>
+
+    </div>
+
+
+    <div class="evolution-grid">
+
+
+        <article class="evolution-card">
+
+            <strong>
+                Observe
+            </strong>
+
+            <p>
+                Monitor system behavior, performance and operational
+                conditions.
+            </p>
+
+        </article>
+
+
+        <article class="evolution-card">
+
+            <strong>
+                Analyze
+            </strong>
+
+            <p>
+                Identify limitations, inefficiencies and potential
+                improvements.
+            </p>
+
+        </article>
+
+
+        <article class="evolution-card">
+
+            <strong>
+                Validate
+            </strong>
+
+            <p>
+                Test proposed changes inside controlled environments
+                before deployment.
+            </p>
+
+        </article>
+
+
+        <article class="evolution-card">
+
+            <strong>
+                Evolve
+            </strong>
+
+            <p>
+                Apply authorized improvements while maintaining
+                versioning, verification and rollback capabilities.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+     ===================================================== -->
+
+<section class="roadmap-cta">
+
+    <h2>
+        The Future of JAVAS Starts With the Core.
+    </h2>
+
+    <p>
+        Explore how the intelligence architecture, capabilities and
+        development roadmap connect to form the JAVAS vision.
+    </p>
+
+    <div class="roadmap-actions">
+
+        <a
+            href="architecture.html"
+            class="roadmap-button"
+        >
+            ARCHITECTURE
+        </a>
+
+        <a
+            href="capabilities.html"
+            class="roadmap-button"
+        >
+            CAPABILITIES
+        </a>
+
+        <a
+            href="intelligence.html"
+            class="roadmap-button"
+        >
+            INTELLIGENCE
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="site-footer">
+
+    <div>
+        <strong>
+            JAVAS
+        </strong>
+
+        <span>
+            Personal Autonomous Artificial Intelligence Platform
+        </span>
+    </div>
+
+    <div>
+        Created by Buyi Julius Xhen
+    </div>
+
+</footer>
+
+</div>
+
+
+<!-- =====================================================
+     JAVAS JAVASCRIPT
+     ===================================================== -->
+
+<script src="main.js"></script>
+
+</body>
+
+</html>
